@@ -1,0 +1,7 @@
+﻿{
+  "Host": "slightcold.date",
+  "Port": "3306",
+  "Username": "tianmao",
+  "Password": "123456",
+  "Database": "tianmao"
+}

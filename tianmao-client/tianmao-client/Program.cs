@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using tianmao_client.Service;
+
+namespace tianmao_client
+{
+    static class Program
+    {
+        private static SocketState state;
+        private static Action stateCallback;
+
+        [STAThread]
+        static void Main()
+        {
+            state = SocketState.Close;
+            SocketClient.SocketClient.SetCallback((a) =>
+            {
+                var keyValue = a.Split(';');
+                for (int i = 0; i < keyValue.Count() - 1; i += 2)
+                {
+                    ServiceSelector(keyValue[i])?.Exec(keyValue[i + 1]);
+                }
+            });
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainForm());
+        }
+
+        public static SocketState State
+        {
+            get { return state; }
+            set
+            {
+                if (value == SocketState.Connected)
+                {
+                    SocketClient.SocketClient.Start();
+                    SocketClient.SocketClient.Send("Connected");
+                }
+                state = value;
+
+                stateCallback();
+            }
+        }
+
+        public enum SocketState
+        {
+            Close,
+            Connected
+        }
+
+        public static void SetStateChange(Action action)
+        {
+            stateCallback = action;
+        }
+
+        public static IService ServiceSelector(String cmd)
+        {
+            switch (cmd)
+            {
+                case "SessionId":
+                    return new SessionService();
+                case "Open":
+                    return new OpenService();
+            }
+            return null;
+        }
+    }
+}

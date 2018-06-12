@@ -1,0 +1,16 @@
+C:\Users\admin\Desktop\tianmao\tianmao\bin\Debug\netcoreapp2.0\aligenie\cc3f5463bc4d26bc38eadc8bcffbc654.txt
+C:\Users\admin\Desktop\tianmao\tianmao\bin\Debug\netcoreapp2.0\tianmao.deps.json
+C:\Users\admin\Desktop\tianmao\tianmao\bin\Debug\netcoreapp2.0\tianmao.runtimeconfig.json
+C:\Users\admin\Desktop\tianmao\tianmao\bin\Debug\netcoreapp2.0\tianmao.runtimeconfig.dev.json
+C:\Users\admin\Desktop\tianmao\tianmao\bin\Debug\netcoreapp2.0\tianmao.dll
+C:\Users\admin\Desktop\tianmao\tianmao\bin\Debug\netcoreapp2.0\tianmao.pdb
+C:\Users\admin\Desktop\tianmao\tianmao\bin\Debug\netcoreapp2.0\DBCommon.dll
+C:\Users\admin\Desktop\tianmao\tianmao\bin\Debug\netcoreapp2.0\DBCommon.pdb
+C:\Users\admin\Desktop\tianmao\tianmao\obj\Debug\netcoreapp2.0\tianmao.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\tianmao\tianmao\obj\Debug\netcoreapp2.0\tianmao.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\tianmao\tianmao\obj\Debug\netcoreapp2.0\tianmao.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\tianmao\tianmao\obj\Debug\netcoreapp2.0\tianmao.AssemblyInfo.cs
+C:\Users\admin\Desktop\tianmao\tianmao\obj\Debug\netcoreapp2.0\tianmao.dll
+C:\Users\admin\Desktop\tianmao\tianmao\obj\Debug\netcoreapp2.0\tianmao.pdb
+C:\Users\admin\Desktop\tianmao\tianmao\bin\Debug\netcoreapp2.0\SocketServer.dll
+C:\Users\admin\Desktop\tianmao\tianmao\bin\Debug\netcoreapp2.0\SocketServer.pdb

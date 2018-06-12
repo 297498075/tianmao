@@ -1,0 +1,17 @@
+C:\Users\admin\Desktop\tianmao-client\SocketClient\bin\Debug\SocketClient.dll
+C:\Users\admin\Desktop\tianmao-client\SocketClient\bin\Debug\SocketClient.pdb
+C:\Users\admin\Desktop\tianmao-client\SocketClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\admin\Desktop\tianmao-client\SocketClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\admin\Desktop\tianmao-client\SocketClient\obj\Debug\SocketClient.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\tianmao-client\SocketClient\obj\Debug\SocketClient.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\tianmao-client\SocketClient\obj\Debug\SocketClient.dll
+C:\Users\admin\Desktop\tianmao-client\SocketClient\obj\Debug\SocketClient.pdb
+C:\Users\匀强的磁场\Desktop\tianmao-client\SocketClient\bin\Debug\SocketClient.dll
+C:\Users\匀强的磁场\Desktop\tianmao-client\SocketClient\bin\Debug\SocketClient.pdb
+C:\Users\匀强的磁场\Desktop\tianmao-client\SocketClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\匀强的磁场\Desktop\tianmao-client\SocketClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\匀强的磁场\Desktop\tianmao-client\SocketClient\obj\Debug\SocketClient.csprojAssemblyReference.cache
+C:\Users\匀强的磁场\Desktop\tianmao-client\SocketClient\obj\Debug\SocketClient.csproj.CoreCompileInputs.cache
+C:\Users\匀强的磁场\Desktop\tianmao-client\SocketClient\obj\Debug\SocketClient.csproj.CopyComplete
+C:\Users\匀强的磁场\Desktop\tianmao-client\SocketClient\obj\Debug\SocketClient.dll
+C:\Users\匀强的磁场\Desktop\tianmao-client\SocketClient\obj\Debug\SocketClient.pdb

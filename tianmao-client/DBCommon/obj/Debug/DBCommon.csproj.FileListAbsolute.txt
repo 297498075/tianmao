@@ -1,0 +1,13 @@
+C:\Users\匀强的磁场\Desktop\tianmao-client\DBCommon\bin\Debug\DBCommon.dll
+C:\Users\匀强的磁场\Desktop\tianmao-client\DBCommon\bin\Debug\DBCommon.pdb
+C:\Users\匀强的磁场\Desktop\tianmao-client\DBCommon\bin\Debug\Google.Protobuf.dll
+C:\Users\匀强的磁场\Desktop\tianmao-client\DBCommon\bin\Debug\MySql.Data.dll
+C:\Users\匀强的磁场\Desktop\tianmao-client\DBCommon\bin\Debug\Newtonsoft.Json.dll
+C:\Users\匀强的磁场\Desktop\tianmao-client\DBCommon\bin\Debug\Google.Protobuf.xml
+C:\Users\匀强的磁场\Desktop\tianmao-client\DBCommon\bin\Debug\MySql.Data.xml
+C:\Users\匀强的磁场\Desktop\tianmao-client\DBCommon\bin\Debug\Newtonsoft.Json.xml
+C:\Users\匀强的磁场\Desktop\tianmao-client\DBCommon\obj\Debug\DBCommon.csprojAssemblyReference.cache
+C:\Users\匀强的磁场\Desktop\tianmao-client\DBCommon\obj\Debug\DBCommon.csproj.CoreCompileInputs.cache
+C:\Users\匀强的磁场\Desktop\tianmao-client\DBCommon\obj\Debug\DBCommon.csproj.CopyComplete
+C:\Users\匀强的磁场\Desktop\tianmao-client\DBCommon\obj\Debug\DBCommon.dll
+C:\Users\匀强的磁场\Desktop\tianmao-client\DBCommon\obj\Debug\DBCommon.pdb
