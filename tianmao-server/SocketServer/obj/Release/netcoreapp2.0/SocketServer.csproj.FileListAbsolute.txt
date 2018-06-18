@@ -24,3 +24,12 @@ C:\Users\匀强的磁场\Desktop\tianmao\SocketServer\obj\Release\netcoreapp2.0\
 C:\Users\匀强的磁场\Desktop\tianmao\SocketServer\obj\Release\netcoreapp2.0\SocketServer.AssemblyInfo.cs
 C:\Users\匀强的磁场\Desktop\tianmao\SocketServer\obj\Release\netcoreapp2.0\SocketServer.dll
 C:\Users\匀强的磁场\Desktop\tianmao\SocketServer\obj\Release\netcoreapp2.0\SocketServer.pdb
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\bin\Release\netcoreapp2.0\SocketServer.deps.json
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\bin\Release\netcoreapp2.0\SocketServer.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\bin\Release\netcoreapp2.0\SocketServer.pdb
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Release\netcoreapp2.0\SocketServer.csprojAssemblyReference.cache
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Release\netcoreapp2.0\SocketServer.csproj.CoreCompileInputs.cache
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Release\netcoreapp2.0\SocketServer.AssemblyInfoInputs.cache
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Release\netcoreapp2.0\SocketServer.AssemblyInfo.cs
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Release\netcoreapp2.0\SocketServer.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Release\netcoreapp2.0\SocketServer.pdb

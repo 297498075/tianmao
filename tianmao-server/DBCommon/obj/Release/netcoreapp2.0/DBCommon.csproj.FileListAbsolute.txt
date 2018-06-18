@@ -25,3 +25,12 @@ C:\Users\匀强的磁场\Desktop\tianmao\DBCommon\obj\Release\netcoreapp2.0\DBCo
 C:\Users\匀强的磁场\Desktop\tianmao\DBCommon\obj\Release\netcoreapp2.0\DBCommon.AssemblyInfo.cs
 C:\Users\匀强的磁场\Desktop\tianmao\DBCommon\obj\Release\netcoreapp2.0\DBCommon.dll
 C:\Users\匀强的磁场\Desktop\tianmao\DBCommon\obj\Release\netcoreapp2.0\DBCommon.pdb
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\DBCommon\bin\Release\netcoreapp2.0\DBCommon.deps.json
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\DBCommon\bin\Release\netcoreapp2.0\DBCommon.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\DBCommon\bin\Release\netcoreapp2.0\DBCommon.pdb
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\DBCommon\obj\Release\netcoreapp2.0\DBCommon.csprojAssemblyReference.cache
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\DBCommon\obj\Release\netcoreapp2.0\DBCommon.csproj.CoreCompileInputs.cache
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\DBCommon\obj\Release\netcoreapp2.0\DBCommon.AssemblyInfoInputs.cache
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\DBCommon\obj\Release\netcoreapp2.0\DBCommon.AssemblyInfo.cs
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\DBCommon\obj\Release\netcoreapp2.0\DBCommon.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\DBCommon\obj\Release\netcoreapp2.0\DBCommon.pdb

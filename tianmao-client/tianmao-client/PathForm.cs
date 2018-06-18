@@ -50,7 +50,8 @@ namespace tianmao_client
             paths.Clear();
             foreach (DataGridViewRow keyValue in dataGridView.Rows)
             {
-                paths.Add(keyValue.Cells[0].Value.ToString()
+                if(!String.IsNullOrEmpty(keyValue.Cells[0].Value?.ToString()))
+                paths.Add(keyValue.Cells[0].Value?.ToString()
                     ,keyValue.Cells[1].Value.ToString());
             }
         }

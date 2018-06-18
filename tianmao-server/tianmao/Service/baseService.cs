@@ -14,10 +14,10 @@ namespace tianmao.Service
 
             ResultModel result = new ResultModel();
 
-            var 参数1 = FindSlotEntity(query,"参数1");
-            var 行为 = FindSlotEntity(query, "行为");
+            var 行为 = query.SlotEntities.Where((a) => a.IntentParameterName == "行为").FirstOrDefault();
+            var 参数 = query.SlotEntities.Where((a) => a.IntentParameterName == "参数").FirstOrDefault();
 
-            result.Reply = "好的,正在帮您" + 参数1.SlotValue + 行为.SlotValue;
+            result.Reply = "好的,正在帮您" + 行为?.SlotValue + 参数?.SlotValue;
 
             SetSuccess(result);
 
@@ -39,22 +39,9 @@ namespace tianmao.Service
             }
             if (query.SlotEntities.Count == 0)
             {
-                query.SlotEntities.Add(new SlotEntity() { SlotValue = "查询" });
-                query.SlotEntities.Add(new SlotEntity() { SlotValue = "电脑" });
+                query.SlotEntities.Add(new SlotEntity() { IntentParameterName = "行为", SlotValue = "查询" });
+                query.SlotEntities.Add(new SlotEntity() { IntentParameterName = "参数", SlotValue = "电脑" });
             }
-        }
-
-        public SlotEntity FindSlotEntity(QueryModel model, String SlotEntityName,int index = 0)
-        {
-            for(int i = 0; i < model.SlotEntities.Count; i++)
-            {
-                if(model.SlotEntities[i].IntentParameterName == SlotEntityName)
-                {
-                    return model.SlotEntities[i];
-                }
-            }
-
-            return null;
         }
     }
 }

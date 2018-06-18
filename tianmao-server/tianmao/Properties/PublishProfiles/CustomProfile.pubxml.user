@@ -6,8 +6,8 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUFzqvavUw0WtxKiPntDX5gAAAAACAAAAAAAQZgAAAAEAACAAAACRLMRTnHcS/SH9PG9Hhqu4+6TEDyFMQVoCW00qZ17EwgAAAAAOgAAAAAIAACAAAAA8iMi9Hts9hKJzfmJDoOagXs6CKolZzsRS0rtyvEoEFhAAAABx7XJL/NZZgUQ2er51MndFQAAAAMKOVHMDsPhhZRtB1DcogYxJQAqee6bLViX5Dt2Vq7ncx4gOCW8QQSfO8UOnB/9+LgN7uwoxWO0UBaBF9S5/OaI=</EncryptedPassword>
-    <_PublishTargetUrl>ftp://moemoed.club/tianmao</_PublishTargetUrl>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+SPD2tLskEObX296EpWhAQAAAAACAAAAAAAQZgAAAAEAACAAAADcNg4CXQLI/4Bj1rxc1S8QtJgM+w4BFBhM+bg4iOzu9gAAAAAOgAAAAAIAACAAAACBKxTVOX8bru0ae4wge4ycbVza2cFoyDZf0eGBwg/QexAAAAACzqGhew1f3zTxbnKBmpv4QAAAAByv27t/XBBBVS6OYpDMeeybg5jvjgWtpc5o5nX5ea6ffeQORpvgGWkVc3sVA6rhjbSY6zRau9iuVvqUUKKSIkA=</EncryptedPassword>
+    <_PublishTargetUrl>C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\tianmao\bin\Release</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="aligenie/cc3f5463bc4d26bc38eadc8bcffbc654.txt">
@@ -734,7 +734,7 @@
       <publishTime>05/11/2018 23:18:26</publishTime>
     </File>
     <File Include="tianmao.deps.json">
-      <publishTime>06/10/2018 15:25:34</publishTime>
+      <publishTime>06/10/2018 15:52:29</publishTime>
     </File>
     <File Include="tianmao.dll">
       <publishTime>06/10/2018 14:36:07</publishTime>
@@ -749,7 +749,7 @@
       <publishTime>06/10/2018 14:38:22</publishTime>
     </File>
     <File Include="tianmao.runtimeconfig.json">
-      <publishTime>06/10/2018 15:25:34</publishTime>
+      <publishTime>06/10/2018 15:52:29</publishTime>
     </File>
     <File Include="web.config">
       <publishTime>06/10/2018 15:52:29</publishTime>

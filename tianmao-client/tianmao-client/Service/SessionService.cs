@@ -13,7 +13,7 @@ namespace tianmao_client.Service
         {
             var dic = new Dictionary<String, Object>();
             var DB = DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main);
-            dic.Add("Id",new MySqlParameter("Id",query));
+            dic.Add("?Id",query);
             DB.ExecuteNonQuery("update Session set SessionId=?Id", dic);
             return true;
         }

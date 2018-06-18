@@ -13202,11 +13202,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\匀强的磁场\\Desktop\\tianmao\\tianmao\\tianmao.csproj",
+      "projectUniqueName": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\tianmao\\tianmao.csproj",
       "projectName": "tianmao",
-      "projectPath": "C:\\Users\\匀强的磁场\\Desktop\\tianmao\\tianmao\\tianmao.csproj",
+      "projectPath": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\tianmao\\tianmao.csproj",
       "packagesPath": "C:\\Users\\匀强的磁场\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\匀强的磁场\\Desktop\\tianmao\\tianmao\\obj\\",
+      "outputPath": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\tianmao\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13225,11 +13225,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\匀强的磁场\\Desktop\\tianmao\\DBCommon\\DBCommon.csproj": {
-              "projectPath": "C:\\Users\\匀强的磁场\\Desktop\\tianmao\\DBCommon\\DBCommon.csproj"
+            "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\DBCommon\\DBCommon.csproj": {
+              "projectPath": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\DBCommon\\DBCommon.csproj"
             },
-            "C:\\Users\\匀强的磁场\\Desktop\\tianmao\\SocketServer\\SocketServer.csproj": {
-              "projectPath": "C:\\Users\\匀强的磁场\\Desktop\\tianmao\\SocketServer\\SocketServer.csproj"
+            "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\SocketServer\\SocketServer.csproj": {
+              "projectPath": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\SocketServer\\SocketServer.csproj"
             }
           }
         }

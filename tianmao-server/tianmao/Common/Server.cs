@@ -21,24 +21,70 @@ namespace tianmao.Common
             clients = new Dictionary<string, AsyncSocketSession>();
             messageQueue = new Dictionary<string, string>();
             SocketServer.SocketServer.SetServerNewClientAccepted(NewAccpet);
+            SocketServer.SocketServer.SetCallBack(CallBack);
             SocketServer.SocketServer.Start();
+
+            var task = Task.Run(() =>
+            {
+                foreach (var client in clients)
+                {
+                    try
+                    {
+                        Send("KeepAlive", "1", client.Value.SessionID);
+                    }
+                    catch (Exception)
+                    {
+                        clients.Remove(client.Value.SessionID);
+                    }
+                }
+                Thread.Sleep(5000);
+            });
         }
 
         private static void NewAccpet(Socket client, ISocketSession session)
         {
             var ass = session as AsyncSocketSession;
-            ass.Send("SessionId:" + ass.SessionID + ";");
+            String content = "SessionId:" + ass.SessionID + ";";
+            ass.Send(content + content.Length);
             clients.Remove(ass.SessionID);
             clients.Add(ass.SessionID, ass);
         }
 
-        public static void Send(String content, String address)
+        public static void Send(String key, String value, String address)
         {
-            if (messageQueue.ContainsKey(address))
+            if (clients.ContainsKey(address))
             {
-                var response = messageQueue[address];
-                messageQueue.Remove(address);
-                clients[address].Send(response);
+                try
+                {
+                    clients[address].Send(key + ":" + value + ";");
+                }
+                catch (Exception)
+                {
+                    clients.Remove(address);
+                }
+            }
+        }
+
+        public static void CallBack(String recevied)
+        {
+            Console.WriteLine(recevied);
+            Dictionary<String, String> cmds = new Dictionary<string, string>();
+            String[] recevieds = recevied.Split(';');
+            for (int i = 0; i < recevieds.Length; i++)
+            {
+                var cmd = recevieds[i].Split(':');
+                if (cmd.Length == 2)
+                {
+                    cmds.Add(cmd[0], cmd[1]);
+                }
+            }
+
+            foreach (KeyValuePair<String, String> cmd in cmds)
+            {
+                if (cmd.Key == "Close")
+                {
+                    clients.Remove(cmd.Value);
+                }
             }
         }
     }

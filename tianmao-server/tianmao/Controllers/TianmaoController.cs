@@ -69,7 +69,7 @@ namespace tianmao.Controllers
                 return new UseService();
             }
 
-            return null;
+            return new ExceptionService();
         }
 
         private QueryModel Convert(String value)

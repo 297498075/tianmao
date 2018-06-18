@@ -32,32 +32,32 @@
     </contentFiles>
   </metadata>
   <files>
-    <file src="C:\Users\admin\Desktop\tianmao\DBCommon\bin\Debug\netcoreapp2.0\DBCommon.dll" target="lib\netcoreapp2.0\DBCommon.dll" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\app.config.transform" target="content\app.config.transform" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\app.config.transform" target="contentFiles\any\netcoreapp2.0\app.config.transform" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlCommand.xml" target="content\MySqlCommand.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlCommand.xml" target="contentFiles\any\netcoreapp2.0\MySqlCommand.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlCommandBuilder.xml" target="content\MySqlCommandBuilder.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlCommandBuilder.xml" target="contentFiles\any\netcoreapp2.0\MySqlCommandBuilder.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlConnection.xml" target="content\MySqlConnection.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlConnection.xml" target="contentFiles\any\netcoreapp2.0\MySqlConnection.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlConnectionStringBuilder.xml" target="content\MySqlConnectionStringBuilder.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlConnectionStringBuilder.xml" target="contentFiles\any\netcoreapp2.0\MySqlConnectionStringBuilder.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlDataAdapter.xml" target="content\MySqlDataAdapter.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlDataAdapter.xml" target="contentFiles\any\netcoreapp2.0\MySqlDataAdapter.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlDataReader.xml" target="content\MySqlDataReader.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlDataReader.xml" target="contentFiles\any\netcoreapp2.0\MySqlDataReader.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlException.xml" target="content\MySqlException.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlException.xml" target="contentFiles\any\netcoreapp2.0\MySqlException.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlHelper.xml" target="content\MySqlHelper.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlHelper.xml" target="contentFiles\any\netcoreapp2.0\MySqlHelper.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlParameter.xml" target="content\MySqlParameter.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlParameter.xml" target="contentFiles\any\netcoreapp2.0\MySqlParameter.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlParameterCollection.xml" target="content\MySqlParameterCollection.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlParameterCollection.xml" target="contentFiles\any\netcoreapp2.0\MySqlParameterCollection.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlTransaction.xml" target="content\MySqlTransaction.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlTransaction.xml" target="contentFiles\any\netcoreapp2.0\MySqlTransaction.xml" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\web.config.transform" target="content\web.config.transform" />
-    <file src="C:\Users\admin\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\web.config.transform" target="contentFiles\any\netcoreapp2.0\web.config.transform" />
+    <file src="C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\DBCommon\bin\Debug\netcoreapp2.0\DBCommon.dll" target="lib\netcoreapp2.0\DBCommon.dll" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\app.config.transform" target="content\app.config.transform" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\app.config.transform" target="contentFiles\any\netcoreapp2.0\app.config.transform" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlCommand.xml" target="content\MySqlCommand.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlCommand.xml" target="contentFiles\any\netcoreapp2.0\MySqlCommand.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlCommandBuilder.xml" target="content\MySqlCommandBuilder.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlCommandBuilder.xml" target="contentFiles\any\netcoreapp2.0\MySqlCommandBuilder.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlConnection.xml" target="content\MySqlConnection.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlConnection.xml" target="contentFiles\any\netcoreapp2.0\MySqlConnection.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlConnectionStringBuilder.xml" target="content\MySqlConnectionStringBuilder.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlConnectionStringBuilder.xml" target="contentFiles\any\netcoreapp2.0\MySqlConnectionStringBuilder.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlDataAdapter.xml" target="content\MySqlDataAdapter.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlDataAdapter.xml" target="contentFiles\any\netcoreapp2.0\MySqlDataAdapter.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlDataReader.xml" target="content\MySqlDataReader.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlDataReader.xml" target="contentFiles\any\netcoreapp2.0\MySqlDataReader.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlException.xml" target="content\MySqlException.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlException.xml" target="contentFiles\any\netcoreapp2.0\MySqlException.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlHelper.xml" target="content\MySqlHelper.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlHelper.xml" target="contentFiles\any\netcoreapp2.0\MySqlHelper.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlParameter.xml" target="content\MySqlParameter.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlParameter.xml" target="contentFiles\any\netcoreapp2.0\MySqlParameter.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlParameterCollection.xml" target="content\MySqlParameterCollection.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlParameterCollection.xml" target="contentFiles\any\netcoreapp2.0\MySqlParameterCollection.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlTransaction.xml" target="content\MySqlTransaction.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\docs\MySqlTransaction.xml" target="contentFiles\any\netcoreapp2.0\MySqlTransaction.xml" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\web.config.transform" target="content\web.config.transform" />
+    <file src="C:\Users\匀强的磁场\.nuget\packages\mysql.data\6.10.6\contentFiles\any\netcoreapp2.0\web.config.transform" target="contentFiles\any\netcoreapp2.0\web.config.transform" />
   </files>
 </package>

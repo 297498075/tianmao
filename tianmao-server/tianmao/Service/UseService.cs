@@ -14,8 +14,8 @@ namespace tianmao.Service
         {
             var model =  base.Exec(query);
 
-            var 参数 = FindSlotEntity(query, "参数");
-            var 行为 = FindSlotEntity(query, "行为");
+            var 行为 = query.SlotEntities.Where((a) => a.IntentParameterName == "行为").FirstOrDefault();
+            var 参数 = query.SlotEntities.Where((a) => a.IntentParameterName == "参数").FirstOrDefault();
 
             var DB = DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main);
 
@@ -27,7 +27,7 @@ namespace tianmao.Service
                 return model;
             }
 
-            Server.Send(行为 + ":" + 参数 + ";", SessionId);
+            Server.Send(行为.SlotValue,参数.SlotValue, SessionId);
 
             return model;
         }

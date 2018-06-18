@@ -14,6 +14,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="C:\Users\admin\Desktop\tianmao\SocketServer\bin\Debug\netcoreapp2.0\SocketServer.dll" target="lib\netcoreapp2.0\SocketServer.dll" />
+    <file src="C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\bin\Debug\netcoreapp2.0\SocketServer.dll" target="lib\netcoreapp2.0\SocketServer.dll" />
   </files>
 </package>

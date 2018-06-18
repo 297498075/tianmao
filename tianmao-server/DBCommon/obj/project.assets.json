@@ -5157,11 +5157,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\匀强的磁场\\Desktop\\tianmao\\DBCommon\\DBCommon.csproj",
+      "projectUniqueName": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\DBCommon\\DBCommon.csproj",
       "projectName": "DBCommon",
-      "projectPath": "C:\\Users\\匀强的磁场\\Desktop\\tianmao\\DBCommon\\DBCommon.csproj",
+      "projectPath": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\DBCommon\\DBCommon.csproj",
       "packagesPath": "C:\\Users\\匀强的磁场\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\匀强的磁场\\Desktop\\tianmao\\DBCommon\\obj\\",
+      "outputPath": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\DBCommon\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

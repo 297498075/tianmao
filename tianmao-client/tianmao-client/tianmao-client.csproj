@@ -96,6 +96,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="MySQL.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Process.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

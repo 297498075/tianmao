@@ -23,7 +23,7 @@ namespace tianmao_client.Service
 
         private string SelectPath(string query)
         {
-            return PathForm.paths["query"];
+            return PathForm.paths.ContainsKey(query) ? PathForm.paths[query] : null;
         }
     }
 }

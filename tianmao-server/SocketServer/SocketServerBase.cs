@@ -142,8 +142,8 @@ namespace SocketServer
 
 
 
-            _socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            _socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.DontLinger, true);
+            //_socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            //_socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.DontLinger, true);
 
             SocketAsyncEventArgs acceptEventArg = new SocketAsyncEventArgs();
             //m_AcceptSAE = acceptEventArg;
@@ -293,8 +293,7 @@ namespace SocketServer
 
         void SessionClosed(ISocketSession session, CloseReason reason)
         {
-            var socketSession = session as IAsyncSocketSessionBase;
-            if (socketSession == null)
+            if (!(session is IAsyncSocketSessionBase socketSession))
                 return;
 
             var proxy = socketSession.SocketAsyncProxy;
@@ -343,7 +342,7 @@ namespace SocketServer
             //    client.IOControl(IOControlCode.KeepAliveValues, m_KeepAliveOptionValues, m_KeepAliveOptionOutValues);
 
             client.NoDelay = true;
-            client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.DontLinger, true);
+            //client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.DontLinger, true);
 
             return this.AppServer.CreateAppSession(session);
         }

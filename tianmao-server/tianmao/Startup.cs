@@ -17,7 +17,17 @@ namespace tianmao
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            Server.Start();
+            try
+            {
+                Server.Start();
+            }
+            catch (Exception e)
+            {
+#pragma warning disable CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
+                Log.WriteLogAsync(e.Message, e.StackTrace);
+#pragma warning restore CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
+                throw;
+            }
         }
 
         public IConfiguration Configuration { get; }

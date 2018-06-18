@@ -708,11 +708,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\匀强的磁场\\Desktop\\tianmao\\SocketServer\\SocketServer.csproj",
+      "projectUniqueName": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\SocketServer\\SocketServer.csproj",
       "projectName": "SocketServer",
-      "projectPath": "C:\\Users\\匀强的磁场\\Desktop\\tianmao\\SocketServer\\SocketServer.csproj",
+      "projectPath": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\SocketServer\\SocketServer.csproj",
       "packagesPath": "C:\\Users\\匀强的磁场\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\匀强的磁场\\Desktop\\tianmao\\SocketServer\\obj\\",
+      "outputPath": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\SocketServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -17,3 +17,11 @@ C:\Users\admin\Desktop\tianmao\SocketServer\obj\Debug\netcoreapp2.0\SocketServer
 C:\Users\admin\Desktop\tianmao\SocketServer\obj\Debug\netcoreapp2.0\SocketServer.AssemblyInfo.cs
 C:\Users\admin\Desktop\tianmao\SocketServer\obj\Debug\netcoreapp2.0\SocketServer.dll
 C:\Users\admin\Desktop\tianmao\SocketServer\obj\Debug\netcoreapp2.0\SocketServer.pdb
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\bin\Debug\netcoreapp2.0\SocketServer.deps.json
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\bin\Debug\netcoreapp2.0\SocketServer.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\bin\Debug\netcoreapp2.0\SocketServer.pdb
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Debug\netcoreapp2.0\SocketServer.csproj.CoreCompileInputs.cache
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Debug\netcoreapp2.0\SocketServer.AssemblyInfoInputs.cache
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Debug\netcoreapp2.0\SocketServer.AssemblyInfo.cs
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Debug\netcoreapp2.0\SocketServer.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Debug\netcoreapp2.0\SocketServer.pdb

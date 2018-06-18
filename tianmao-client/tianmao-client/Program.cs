@@ -19,9 +19,13 @@ namespace tianmao_client
             SocketClient.SocketClient.SetCallback((a) =>
             {
                 var keyValue = a.Split(';');
-                for (int i = 0; i < keyValue.Count() - 1; i += 2)
+                for (int i = 0; i < keyValue.Count(); i ++)
                 {
-                    ServiceSelector(keyValue[i])?.Exec(keyValue[i + 1]);
+                    var val = keyValue[i].Split(':');
+                    if(val.Count() == 2)
+                    {
+                        ServiceSelector(val[0])?.Exec(val[1]);
+                    }
                 }
             });
             Application.EnableVisualStyles();
@@ -41,7 +45,7 @@ namespace tianmao_client
                 }
                 state = value;
 
-                stateCallback();
+                stateCallback?.Invoke();
             }
         }
 
@@ -62,7 +66,7 @@ namespace tianmao_client
             {
                 case "SessionId":
                     return new SessionService();
-                case "Open":
+                case "打开":
                     return new OpenService();
             }
             return null;

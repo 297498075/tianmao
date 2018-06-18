@@ -40,7 +40,14 @@ namespace SocketClient
                 {
                     IPEndPoint ipe = new IPEndPoint(address, _port);
                     Socket tempSocket = new Socket(ipe.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
-                    tempSocket.Connect(ipe);
+                    try
+                    {
+                        tempSocket.Connect(ipe);
+                    }
+                    catch (Exception e)
+                    {
+                        continue;
+                    }
                     if (tempSocket.Connected)
                     {
                         client = tempSocket;
@@ -54,18 +61,12 @@ namespace SocketClient
 
                 Task.Run(() =>
                 {
-                    List<ArraySegment<byte>> buffer = new List<ArraySegment<byte>>();
+                    byte[] buffer = new byte[1024];
                     while (true)
                     {
                         client.Receive(buffer);
-                        String recevied = String.Empty;
-                        List<byte> list = new List<byte>();
-                        buffer.ForEach((a) =>
-                        {
-                            list.AddRange(a);
-                        });
-                        recevied = Encoding.UTF8.GetString(list.ToArray());
-
+                        String recevied = Encoding.UTF8.GetString(buffer);
+                        Console.WriteLine(recevied);
                         callback(recevied);
                     }
                 });
@@ -80,7 +81,7 @@ namespace SocketClient
 
         public static void Send(String info)
         {
-            client.Send(Encoding.UTF8.GetBytes(info));
+            client?.Send(Encoding.UTF8.GetBytes(info));
         }
 
         public static void SetCallback(Action<String> action)
