@@ -6,14 +6,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Convert\**" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="Convert\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="Convert\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="Convert\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="214287239480360.pfx" />
     <None Remove="cc3f5463bc4d26bc38eadc8bcffbc654.txt" />
     <None Remove="Properties\PublishProfiles\CustomProfile.pubxml" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Properties\PublishProfiles\" />
-    <Folder Include="wwwroot\" />
-    <Folder Include="Convert\" />
     <Folder Include="aligenie\" />
   </ItemGroup>
 

@@ -26,11 +26,11 @@ namespace tianmao.Controllers
 
             QueryModel query = Convert(queryString);
 
-            if (query == null) { WriteError(Response,ErrorModel); }
+            if (query == null) { return WriteError(Response,ErrorModel); }
 
             service = SelectService(query);
 
-            if (service == null) { WriteError(Response, ErrorModel); }
+            if (service == null) { return WriteError(Response, ErrorModel); }
 
             ResultModel result = null;
 
@@ -41,7 +41,7 @@ namespace tianmao.Controllers
             catch (Exception e)
             {
                 Log.WriteLogAsync(e.Message, service.GetType().Name);
-                WriteError(Response, ErrorModel);
+                return WriteError(Response, ErrorModel);
             }
             ResponseModel<ResultModel> model = new ResponseModel<ResultModel>();
             model.ReturnCode = "0";
@@ -51,7 +51,6 @@ namespace tianmao.Controllers
             String resultString = JsonConvert.SerializeObject(model);
             Log.WriteLogAsync(resultString, "response");
             byte[] by = Encoding.UTF8.GetBytes(resultString);
-            Response.ContentLength = by.Length;
             Response.Body.Write(by, 0, by.Length);
             Response.Body.Flush();
             return null;
@@ -59,12 +58,12 @@ namespace tianmao.Controllers
 
         private IService SelectService(QueryModel query)
         {
-            if (query.SlotEntities?.Count == 0)
+            if (query?.SlotEntities?.Count == 0)
             {
                 query.SlotEntities.Add(new SlotEntity() { SlotValue = "查询" });
                 query.SlotEntities.Add(new SlotEntity() { SlotValue = "电脑" });
             }
-            if (query.IntentName == "使用")
+            if (query?.IntentName == "使用")
             {
                 return new UseService();
             }
@@ -131,7 +130,6 @@ namespace tianmao.Controllers
 
         public HttpResponseMessage WriteError(HttpResponse Response, byte[] resultString)
         {
-            Response.ContentLength = resultString.Length;
             Response.Body.Write(resultString, 0, resultString.Length);
             Response.Body.Flush();
             return null;
