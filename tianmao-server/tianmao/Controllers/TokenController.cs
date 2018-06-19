@@ -18,27 +18,31 @@ namespace tianmao
     {
         static TokenController()
         {
-            var DB = DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main);
-            String exist = DB.ExecuteSingle("SELECT table_name FROM information_schema.TABLES WHERE table_name ='TokenLog'");
+//            var DB = DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main);
+//            String exist = DB.ExecuteSingle("SELECT table_name FROM information_schema.TABLES WHERE table_name ='TokenLog'");
 
-            if (String.IsNullOrEmpty(exist))
-            {
-                DB.ExecuteNonQuery(@"create table TokenLog
-(
-date datetime default now(),
-redirect_uri text,
-client_id varchar(128),
-response_type varchar(32),
-state varchar(32)
-)");
-            }
+//            if (String.IsNullOrEmpty(exist))
+//            {
+//                DB.ExecuteNonQuery(@"create table TokenLog
+//(
+//date datetime default now(),
+//redirect_uri text,
+//client_id varchar(128),
+//response_type varchar(32),
+//state varchar(32)
+//)");
+//            }
         }
+
         [HttpPost]
-        public void Post()
+        [HttpGet]
+        public void PostAsync()
         {
             byte[] buffer = Request.Body.GetAllBytes();
             String queryString = Encoding.UTF8.GetString(buffer);
+#pragma warning disable CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
             Log.WriteLogAsync(queryString, "request");
+#pragma warning restore CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
 
             //var redirect_uri = Request.Query["redirect_uri"].FirstOrDefault();
             //var client_id = Request.Query["client_id"].FirstOrDefault();
@@ -57,7 +61,7 @@ state varchar(32)
             jsetting.NullValueHandling = NullValueHandling.Ignore;
             String resultString = JsonConvert.SerializeObject(new Token() { Error = "200", Error_description = "还未启用" }, Formatting.Indented, jsetting);
             Log.WriteLogAsync(resultString, "response");
-            byte[] by = Encoding.UTF8.GetBytes(resultString);
+            byte[] by = Encoding.UTF8.GetBytes(resultString);       
             Response.Body.Write(by, 0, by.Length);
             Response.Body.Flush();
         }

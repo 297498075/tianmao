@@ -52,3 +52,7 @@ C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\tianmao-client\
 C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\tianmao-client\obj\Debug\tianmao-client.exe
 C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\tianmao-client\obj\Debug\tianmao-client.pdb
 C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\tianmao-client\bin\Debug\MySQL.json
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\tianmao-client\bin\Debug\tianmao-client.exe.manifest
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\tianmao-client\bin\Debug\tianmao-client.application
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\tianmao-client\obj\Debug\tianmao-client.exe.manifest
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\tianmao-client\obj\Debug\tianmao-client.application

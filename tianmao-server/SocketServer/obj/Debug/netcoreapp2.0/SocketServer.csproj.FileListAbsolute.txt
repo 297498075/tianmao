@@ -34,3 +34,4 @@ C:\Users\chen2\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Debug\ne
 C:\Users\chen2\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Debug\netcoreapp2.0\SocketServer.AssemblyInfo.cs
 C:\Users\chen2\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Debug\netcoreapp2.0\SocketServer.dll
 C:\Users\chen2\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Debug\netcoreapp2.0\SocketServer.pdb
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-server\SocketServer\obj\Debug\netcoreapp2.0\SocketServer.csprojAssemblyReference.cache

@@ -32,6 +32,7 @@ state varchar(32)
             }
         }
         [HttpPost]
+        [HttpGet]
         public void Post()
         {
             byte[] buffer = Request.Body.GetAllBytes();
@@ -50,6 +51,7 @@ state varchar(32)
             dic.Add("state", state);
             DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main)
                 .ExecuteNonQuery(@"Insert into OAuthLog(redirect_uri,client_id,response_type,state) values(?redirect_uri,?client_id,?response_type,?state)", dic);
+
         }
     }
 }
