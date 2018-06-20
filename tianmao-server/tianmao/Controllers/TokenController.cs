@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -35,8 +36,7 @@ namespace tianmao
         }
 
         [HttpPost]
-        [HttpGet]
-        public void PostAsync()
+        public HttpResponseMessage Post()
         {
             byte[] buffer = Request.Body.GetAllBytes();
             String queryString = Encoding.UTF8.GetString(buffer);
@@ -59,11 +59,19 @@ namespace tianmao
 
             JsonSerializerSettings jsetting = new JsonSerializerSettings();
             jsetting.NullValueHandling = NullValueHandling.Ignore;
-            String resultString = JsonConvert.SerializeObject(new Token() { Error = "200", Error_description = "还未启用" }, Formatting.Indented, jsetting);
+            String resultString = JsonConvert.SerializeObject(new Token()
+            {
+                Access_token = "NzQ2OTI2MTUwQUZFSElORkRWUQ==",
+                Refresh_token = "NzQ2OTI2MTUwQUZFSElORkRWUQ==",
+                Expires_in = 17600000
+            }, Formatting.Indented, jsetting);
             Log.WriteLogAsync(resultString, "response");
             byte[] by = Encoding.UTF8.GetBytes(resultString);       
             Response.Body.Write(by, 0, by.Length);
             Response.Body.Flush();
+            Response.StatusCode = 200;
+            Response.ContentType = "application/json";
+            return null;
         }
     }
 }

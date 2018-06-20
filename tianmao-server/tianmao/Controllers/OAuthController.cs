@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using tianmao.Common;
 
 namespace tianmao
@@ -14,6 +16,7 @@ namespace tianmao
     [Route("/oauth")]
     public class OAuthController : Controller
     {
+        private static byte[] htmlPage;
         static OAuthController()
         {
             var DB = DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main);
@@ -30,10 +33,15 @@ response_type varchar(32),
 state varchar(32)
 )");
             }
+            using (FileStream fs = new FileStream("oauth.html", FileMode.Open))
+            {
+                htmlPage = new byte[fs.Length];
+                fs.Read(htmlPage, 0, Convert.ToInt32(fs.Length));
+            }
         }
         [HttpPost]
         [HttpGet]
-        public void Post()
+        public HttpResponseMessage Post()
         {
             byte[] buffer = Request.Body.GetAllBytes();
             String queryString = Encoding.UTF8.GetString(buffer);
@@ -52,6 +60,10 @@ state varchar(32)
             DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main)
                 .ExecuteNonQuery(@"Insert into OAuthLog(redirect_uri,client_id,response_type,state) values(?redirect_uri,?client_id,?response_type,?state)", dic);
 
+            Response.ContentType = "text/html;charset=UTF-8";
+            Response.Body.Write(htmlPage, 0, htmlPage.Length);
+            Response.Body.Flush();
+            return null;
         }
     }
 }

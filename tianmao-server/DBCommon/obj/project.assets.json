@@ -5151,23 +5151,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\匀强的磁场\\.nuget\\packages\\": {},
+    "C:\\Users\\chen2\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\DBCommon\\DBCommon.csproj",
+      "projectUniqueName": "C:\\Users\\chen2\\Documents\\GitHub\\tianmao\\tianmao-server\\DBCommon\\DBCommon.csproj",
       "projectName": "DBCommon",
-      "projectPath": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\DBCommon\\DBCommon.csproj",
-      "packagesPath": "C:\\Users\\匀强的磁场\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\匀强的磁场\\Documents\\GitHub\\tianmao\\tianmao-server\\DBCommon\\obj\\",
+      "projectPath": "C:\\Users\\chen2\\Documents\\GitHub\\tianmao\\tianmao-server\\DBCommon\\DBCommon.csproj",
+      "packagesPath": "C:\\Users\\chen2\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\chen2\\Documents\\GitHub\\tianmao\\tianmao-server\\DBCommon\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\匀强的磁场\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chen2\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
