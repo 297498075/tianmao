@@ -22,7 +22,7 @@ namespace tianmao.Controllers
         {
             byte[] buffer = Request.Body.GetAllBytes();
             String queryString = Encoding.UTF8.GetString(buffer);
-            Log.WriteLogAsync(queryString, "request");
+            Log.WriteLogAsync(queryString + "query部分:" + Request.QueryString, "request");
 
             QueryModel query = Convert(queryString);
 
