@@ -8,7 +8,7 @@ namespace SocketServer
 {
     public class SocketServer
     {
-        private static Action<String> _receiveCallback;
+        private static Action<AsyncSocketSession,String> _receiveCallback;
         private static Action<Socket, ISocketSession> _newAcceptedCallback;
         private static SocketServerBase server;
 
@@ -25,12 +25,12 @@ namespace SocketServer
             ass.SetReceiveHandler(arg =>
             {
                 string received = Encoding.UTF8.GetString(arg.Buffer, arg.Offset, arg.BytesTransferred);
-                _receiveCallback?.Invoke(received);
+                _receiveCallback?.Invoke(ass,received);
             });
             _newAcceptedCallback(client, session);
         }
 
-        public static void SetCallBack(Action<String> func)
+        public static void SetCallBack(Action<AsyncSocketSession,String> func)
         {
             _receiveCallback = func;
         }

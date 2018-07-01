@@ -44,7 +44,7 @@ namespace SocketClient
                     {
                         tempSocket.Connect(ipe);
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     {
                         continue;
                     }
@@ -64,7 +64,14 @@ namespace SocketClient
                     byte[] buffer = new byte[1024];
                     while (true)
                     {
-                        client.Receive(buffer);
+                        try
+                        {
+                            client.Receive(buffer);
+                        }
+                        catch (Exception e)
+                        {
+                            return;
+                        }
                         String recevied = Encoding.UTF8.GetString(buffer);
                         Console.WriteLine(recevied);
                         callback(recevied);
@@ -73,7 +80,7 @@ namespace SocketClient
 
                 return true;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }

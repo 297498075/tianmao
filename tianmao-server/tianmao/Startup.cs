@@ -46,7 +46,6 @@ namespace tianmao
             {
                 app.UseDeveloperExceptionPage();
             }
-           
 
             app.UseMvc();
 

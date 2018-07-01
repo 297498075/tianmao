@@ -14,7 +14,7 @@ namespace tianmao.Controllers
     {
         private static FileInfo file;
 
-        private static FileInfo key
+        private static FileInfo Key
         {
             get
             {
@@ -30,7 +30,7 @@ namespace tianmao.Controllers
         {
             if (value == "cc3f5463bc4d26bc38eadc8bcffbc654.txt")
             {
-                Response.WriteAsync(key.OpenText().ReadToEnd());
+                Response.WriteAsync(Key.OpenText().ReadToEnd());
             }
         }
 
@@ -39,7 +39,7 @@ namespace tianmao.Controllers
         {
             if (value == "cc3f5463bc4d26bc38eadc8bcffbc654.txt")
             {
-                Response.WriteAsync(key.OpenText().ReadToEnd());
+                Response.WriteAsync(Key.OpenText().ReadToEnd());
             }
         }
     }

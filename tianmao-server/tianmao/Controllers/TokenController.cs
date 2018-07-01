@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using tianmao.Common;
-using tianmao.Model;
+using tianmao.Model.Domain;
 
 namespace tianmao
 {
@@ -48,9 +48,11 @@ userId bigint
             //var client_id = Request.Query["client_id"].FirstOrDefault();
             //var response_type = Request.Query["response_type"].FirstOrDefault();
             //var state = Request.Query["state"].FirstOrDefault();
-           
-            JsonSerializerSettings jsetting = new JsonSerializerSettings();
-            jsetting.NullValueHandling = NullValueHandling.Ignore;
+
+            JsonSerializerSettings jsetting = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore
+            };
             String access_token = Guid.NewGuid().ToString();
             String refresh_token = Guid.NewGuid().ToString();
             String resultString = JsonConvert.SerializeObject(new Token()
@@ -60,14 +62,18 @@ userId bigint
                 Expires_in = 17600000
             }, Formatting.Indented, jsetting);
 
-            var dic = new Dictionary<String, Object>();
-            dic.Add("access_token", access_token);
-            dic.Add("refresh_token", refresh_token);
-            dic.Add("userId", 111);
+            var dic = new Dictionary<String, Object>
+            {
+                { "access_token", access_token },
+                { "refresh_token", refresh_token },
+                { "userId", 111 }
+            };
             DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main)
                 .ExecuteNonQuery(@"Insert into TokenLog(access_token,refresh_token,userId) values(?access_token,?refresh_token,?userId)", dic);
 
+#pragma warning disable CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
             Log.WriteLogAsync(resultString, "response");
+#pragma warning restore CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
             byte[] by = Encoding.UTF8.GetBytes(resultString);       
             Response.Body.Write(by, 0, by.Length);
             Response.Body.Flush();

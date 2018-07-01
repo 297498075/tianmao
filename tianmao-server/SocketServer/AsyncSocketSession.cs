@@ -191,10 +191,10 @@ namespace SocketServer
         /// Sends the message to client.
         /// </summary>
         /// <param name="message">The message which will be sent.</param>
-        public virtual void Send(string message)
+        public virtual bool Send(string message)
         {
             var data = System.Text.Encoding.UTF8.GetBytes(message);
-            Send(data, 0, data.Length);
+            return Send(data, 0, data.Length);
         }
 
         /// <summary>
@@ -203,9 +203,9 @@ namespace SocketServer
         /// <param name="data">The data which will be sent.</param>
         /// <param name="offset">The offset.</param>
         /// <param name="length">The length.</param>
-        public virtual void Send(byte[] data, int offset, int length)
+        public virtual bool Send(byte[] data, int offset, int length)
         {
-            InternalTrySend(new ArraySegment<byte>(data, offset, length));
+            return InternalTrySend(new ArraySegment<byte>(data, offset, length));
         }
 
         private bool InternalTrySend(ArraySegment<byte> segment)

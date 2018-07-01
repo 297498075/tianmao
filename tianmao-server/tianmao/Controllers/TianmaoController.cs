@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using tianmao.Common;
-using tianmao.Model;
+using tianmao.Model.Domain;
 using tianmao.Service;
 
 namespace tianmao.Controllers
 {
     [Produces("application/json")]
-    [Route("tianmao")]
+    [Route("/tianmao")]
     public class TianmaoController : Controller
     {
         public IService service;
@@ -22,7 +22,9 @@ namespace tianmao.Controllers
         {
             byte[] buffer = Request.Body.GetAllBytes();
             String queryString = Encoding.UTF8.GetString(buffer);
-            Log.WriteLogAsync(queryString + "query部分:" + Request.QueryString, "request");
+#pragma warning disable CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
+            Log.WriteLogAsync(queryString, "request");
+#pragma warning restore CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
 
             QueryModel query = Convert(queryString);
 
@@ -40,16 +42,22 @@ namespace tianmao.Controllers
             }
             catch (Exception e)
             {
+#pragma warning disable CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
                 Log.WriteLogAsync(e.Message, service.GetType().Name);
+#pragma warning restore CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
                 return WriteError(Response, ErrorModel);
             }
-            ResponseModel<ResultModel> model = new ResponseModel<ResultModel>();
-            model.ReturnCode = "0";
-            model.ReturnValue = result;
+            ResponseModel<ResultModel> model = new ResponseModel<ResultModel>
+            {
+                ReturnCode = "0",
+                ReturnValue = result
+            };
 
 
             String resultString = JsonConvert.SerializeObject(model);
+#pragma warning disable CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
             Log.WriteLogAsync(resultString, "response");
+#pragma warning restore CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
             byte[] by = Encoding.UTF8.GetBytes(resultString);
             Response.Body.Write(by, 0, by.Length);
             Response.Body.Flush();
@@ -75,7 +83,9 @@ namespace tianmao.Controllers
         {
             if (value == null)
             {
+#pragma warning disable CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
                 Log.WriteLogAsync("value==null", "Convert");
+#pragma warning restore CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
                 return null;
             }
             QueryModel query = null;
@@ -85,13 +95,17 @@ namespace tianmao.Controllers
             }
             catch (Exception e)
             {
+#pragma warning disable CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
                 Log.WriteLogAsync("解析请求值错误:" + value, e.Message);
+#pragma warning restore CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
                 return null;
             }
 
             if (query == null || query.SessionId == null)
             {
+#pragma warning disable CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
                 Log.WriteLogAsync("query为空:" + value);
+#pragma warning restore CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
                 return null;
             }
             return query;

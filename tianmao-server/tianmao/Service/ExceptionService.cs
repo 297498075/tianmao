@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using tianmao.Model;
+using tianmao.Model.Domain;
 
 namespace tianmao.Service
 {

@@ -45,18 +45,22 @@ state varchar(32)
         {
             byte[] buffer = Request.Body.GetAllBytes();
             String queryString = Encoding.UTF8.GetString(buffer);
+#pragma warning disable CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
             Log.WriteLogAsync(queryString, "request");
+#pragma warning restore CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
 
             var redirect_uri = Request.Query["redirect_uri"].FirstOrDefault();
             var client_id = Request.Query["client_id"].FirstOrDefault();
             var response_type = Request.Query["response_type"].FirstOrDefault();
             var state = Request.Query["state"].FirstOrDefault();
 
-            var dic = new Dictionary<String,Object>();
-            dic.Add("redirect_uri", redirect_uri);
-            dic.Add("client_id", client_id);
-            dic.Add("response_type", response_type);
-            dic.Add("state", state);
+            var dic = new Dictionary<String, Object>
+            {
+                { "redirect_uri", redirect_uri },
+                { "client_id", client_id },
+                { "response_type", response_type },
+                { "state", state }
+            };
             DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main)
                 .ExecuteNonQuery(@"Insert into OAuthLog(redirect_uri,client_id,response_type,state) values(?redirect_uri,?client_id,?response_type,?state)", dic);
 

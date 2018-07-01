@@ -154,7 +154,7 @@ namespace DBCommon.MySQL
             MySqlConnection connection = GetMySqlConnection();
             var commond = GetMySqlCommand(connection, sql, parameters.ToArray(), commandType);
 
-     
+            
 
             var reader = commond.ExecuteReader();
             if (reader.Read())
@@ -181,7 +181,9 @@ namespace DBCommon.MySQL
                         T t = new T();
                         foreach (var map in Maps)
                         {
-                            map.Key.SetValue(t, reader.GetValue(map.Value));
+                            var value = reader.GetValue(map.Value);
+                            if(value == null) { value = String.Empty; };
+                            map.Key.SetValue(t, value.ToString());
                         }
                         list.Add(t);
                     } while (reader.Read());

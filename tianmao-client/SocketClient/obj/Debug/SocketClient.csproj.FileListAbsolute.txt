@@ -23,3 +23,4 @@ C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\ob
 C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Debug\SocketClient.csproj.CopyComplete
 C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Debug\SocketClient.dll
 C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Debug\SocketClient.pdb
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Debug\SocketClient.csprojAssemblyReference.cache

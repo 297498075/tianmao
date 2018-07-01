@@ -26,46 +26,48 @@ namespace tianmao.Common
 
             var task = Task.Run(() =>
             {
-                foreach (var client in clients)
+                while (true)
                 {
-                    try
+                    foreach (var client in clients)
                     {
-                        Send("KeepAlive", "1", client.Value.SessionID);
+                        try
+                        {
+                            bool ok = client.Value.Send("KeepAlive:1;");
+                            if (!ok) { clients.Remove(client.Key); }
+                        }
+                        catch (Exception)
+                        {
+                            clients.Remove(client.Value.SessionID);
+                        }
                     }
-                    catch (Exception)
-                    {
-                        clients.Remove(client.Value.SessionID);
-                    }
+                    Thread.Sleep(5000);
                 }
-                Thread.Sleep(5000);
             });
         }
 
         private static void NewAccpet(Socket client, ISocketSession session)
         {
             var ass = session as AsyncSocketSession;
-            String content = "SessionId:" + ass.SessionID + ";";
-            ass.Send(content + content.Length);
-            clients.Remove(ass.SessionID);
-            clients.Add(ass.SessionID, ass);
         }
 
-        public static void Send(String key, String value, String address)
+        public static bool Send(String key, String value, String address)
         {
-            if (clients.ContainsKey(address))
+            if (!clients.TryGetValue(address, out AsyncSocketSession val)) return false;
+
+            try
             {
-                try
-                {
-                    clients[address].Send(key + ":" + value + ";");
-                }
-                catch (Exception)
-                {
-                    clients.Remove(address);
-                }
+                bool ok = val.Send(key + ":" + value + ";");
+                if(!ok) { clients.Remove(address); }
+                return ok;
             }
+            catch (Exception)
+            {
+                clients.Remove(address);
+            }
+            return false;
         }
 
-        public static void CallBack(String recevied)
+        public static void CallBack(AsyncSocketSession ass, String recevied)
         {
             Console.WriteLine(recevied);
             Dictionary<String, String> cmds = new Dictionary<string, string>();
@@ -84,6 +86,14 @@ namespace tianmao.Common
                 if (cmd.Key == "Close")
                 {
                     clients.Remove(cmd.Value);
+                }
+
+                if (cmd.Key == "UserId" && !clients.ContainsKey(cmd.Key))
+                {
+                    clients.Add(cmd.Value, ass);
+                    String content = "Session:OK;";
+                    bool ok = ass.Send(content + content.Length);
+                    if (!ok) { clients.Remove(cmd.Value); }
                 }
             }
         }

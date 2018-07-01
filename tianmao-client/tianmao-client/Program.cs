@@ -41,7 +41,7 @@ namespace tianmao_client
                 if (value == SocketState.Connected)
                 {
                     SocketClient.SocketClient.Start();
-                    SocketClient.SocketClient.Send("Connected");
+                    SocketClient.SocketClient.Send("UserId:" + MainForm.Id);
                 }
                 state = value;
 

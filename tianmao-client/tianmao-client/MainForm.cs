@@ -6,6 +6,12 @@ namespace tianmao_client
 {
     public partial class MainForm : System.Windows.Forms.Form
     {
+        private static String address = String.Empty;
+        private static String id = String.Empty;
+
+        public static string Address { get => address.Trim(); set => address = value; }
+        public static string Id { get => id.Trim(); set => id = value; }
+
         public MainForm()
         {
             InitializeComponent();
@@ -15,6 +21,8 @@ namespace tianmao_client
         {
             if(Program.State == Program.SocketState.Close)
             {
+                address = textBox_服务器地址.Text;
+                id = textBox_名称.Text;
                 Program.State = Program.SocketState.Connected;
                 button_ok.Text = "断开";
             }
