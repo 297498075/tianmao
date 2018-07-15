@@ -193,7 +193,7 @@ namespace SocketServer
         /// <param name="message">The message which will be sent.</param>
         public virtual bool Send(string message)
         {
-            var data = System.Text.Encoding.UTF8.GetBytes(message);
+            var data = Encoding.UTF8.GetBytes(message);
             return Send(data, 0, data.Length);
         }
 

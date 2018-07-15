@@ -18,6 +18,7 @@ namespace tianmao_client
             state = SocketState.Close;
             SocketClient.SocketClient.SetCallback((a) =>
             {
+                Console.WriteLine(a);
                 var keyValue = a.Split(';');
                 for (int i = 0; i < keyValue.Count(); i ++)
                 {
@@ -40,8 +41,9 @@ namespace tianmao_client
             {
                 if (value == SocketState.Connected)
                 {
-                    SocketClient.SocketClient.Start();
-                    SocketClient.SocketClient.Send("UserId:" + MainForm.Id);
+                    bool ok = SocketClient.SocketClient.Start();
+                    
+                    if(ok) SocketClient.SocketClient.Send("UserId:" + MainForm.Id);
                 }
                 state = value;
 

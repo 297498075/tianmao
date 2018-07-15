@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static tianmao.Common.ServerCommands;
 
 namespace tianmao.Common
 {
@@ -24,23 +25,12 @@ namespace tianmao.Common
             SocketServer.SocketServer.SetCallBack(CallBack);
             SocketServer.SocketServer.Start();
 
-            var task = Task.Run(() =>
+            Task.Run(() =>
             {
                 while (true)
                 {
-                    foreach (var client in clients)
-                    {
-                        try
-                        {
-                            bool ok = client.Value.Send("KeepAlive:1;");
-                            if (!ok) { clients.Remove(client.Key); }
-                        }
-                        catch (Exception)
-                        {
-                            clients.Remove(client.Value.SessionID);
-                        }
-                    }
-                    Thread.Sleep(5000);
+                    SendKeepAlive();
+                    Task.Delay(12000).Wait();
                 }
             });
         }
@@ -50,19 +40,27 @@ namespace tianmao.Common
             var ass = session as AsyncSocketSession;
         }
 
-        public static bool Send(String key, String value, String address)
+        public static bool Send<T>(T value, String address)
         {
-            if (!clients.TryGetValue(address, out AsyncSocketSession val)) return false;
+            return Send(value.GetType().Name, value.ToString(), address);
+        }
 
-            try
+        public static bool Send(string commandName, string commandValue, string address)
+        {
+            lock (clients)
             {
-                bool ok = val.Send(key + ":" + value + ";");
-                if(!ok) { clients.Remove(address); }
-                return ok;
-            }
-            catch (Exception)
-            {
-                clients.Remove(address);
+                if (!clients.TryGetValue(address, out AsyncSocketSession val)) return false;
+
+                try
+                {
+                    bool ok = val.Send(commandName + ":" + commandValue + ";");
+                    if (!ok) { clients.Remove(address); }
+                    return ok;
+                }
+                catch (Exception)
+                {
+                    clients.Remove(address);
+                }
             }
             return false;
         }
@@ -91,9 +89,27 @@ namespace tianmao.Common
                 if (cmd.Key == "UserId" && !clients.ContainsKey(cmd.Key))
                 {
                     clients.Add(cmd.Value, ass);
-                    String content = "Session:OK;";
-                    bool ok = ass.Send(content + content.Length);
+                    var ok = Send(Session.Success, cmd.Value);
                     if (!ok) { clients.Remove(cmd.Value); }
+                }
+            }
+        }
+
+        public static void SendKeepAlive()
+        {
+            lock (clients)
+            {
+                foreach (var client in clients.Keys)
+                {
+                    try
+                    {
+                        bool ok = Send(KeepAlive.Keep, client);
+                        if (!ok) { clients.Remove(client); }
+                    }
+                    catch (Exception)
+                    {
+                        clients.Remove(client);
+                    }
                 }
             }
         }

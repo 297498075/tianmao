@@ -44,6 +44,7 @@ namespace tianmao.Service
             if (!ok)
             {
                 model.Reply = "您还没有打开电脑客户端哦";
+                model.ResultType = ResultType.RESULT;
                 return model;
             }
 

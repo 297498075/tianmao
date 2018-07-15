@@ -32,7 +32,7 @@ namespace tianmao.Service
             var 行为 = query.SlotEntities.Where((a) => a.IntentParameterName == "行为").FirstOrDefault();
             var 参数 = query.SlotEntities.Where((a) => a.IntentParameterName == "参数").FirstOrDefault();
 
-            if (行为 == null)
+            if (行为 == null  || 行为.SlotValue == "无")
             {
                 result.Reply = "好的,设备已连接，请问需要帮您做什么呢";
                 result.ResultType = ResultType.ASK_INF;

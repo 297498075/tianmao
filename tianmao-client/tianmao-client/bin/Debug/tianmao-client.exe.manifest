@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qCFBRRrFViGlHRcZ1l7KGWZwWSiBi7w2VuCl0dDi9Uo=</dsig:DigestValue>
+        <dsig:DigestValue>2i/kLbuTcrc5LcPD6o+OVyigo+rM8ev/QaXgSvlO0HU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -90,14 +90,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SocketClient.dll" size="6144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SocketClient.dll" size="6656">
       <assemblyIdentity name="SocketClient" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ubzHxd0nvdCYE47AH8RuxsbNI47wxIM/1TcJhUsYMbA=</dsig:DigestValue>
+        <dsig:DigestValue>HQig8Kdw9kOE6kab/pQK5eqWoEgyW3bP3APAyjoywnc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -109,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>K9ZxbMLUTiMWgjhVuConN+Cxcp4/JlgeTwx4ltG4RNA=</dsig:DigestValue>
+        <dsig:DigestValue>gUjdVM+nv8OTpKCA4cKoavl8kNaktm8ncYyK6LxxchI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -30,16 +30,13 @@ namespace SocketClient
 
                 String port = Config["port"];
                 int _port = Convert.ToInt32(port);
-
-                // Get host related information.
+                
                 var hostEntry = Dns.GetHostEntry(host);
-                // Loop through the AddressList to obtain the supported AddressFamily. This is to avoid
-                // an exception that occurs when the host IP Address is not compatible with the address family
-                // (typical in the IPv6 case).
                 foreach (IPAddress address in hostEntry.AddressList)
                 {
                     IPEndPoint ipe = new IPEndPoint(address, _port);
-                    Socket tempSocket = new Socket(ipe.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+                    Socket tempSocket = new Socket(ipe.AddressFamily,
+                        SocketType.Stream, ProtocolType.Tcp);
                     try
                     {
                         tempSocket.Connect(ipe);
@@ -61,27 +58,32 @@ namespace SocketClient
 
                 Task.Run(() =>
                 {
-                    byte[] buffer = new byte[1024];
+                    byte[] buffer = null;
+                    List<byte> builder = new List<byte>();
+
                     while (true)
                     {
-                        try
-                        {
-                            client.Receive(buffer);
-                        }
-                        catch (Exception e)
+                        Recvie(buffer,builder);
+
+                        var str = Encoding.UTF8.GetString(builder.ToArray())
+                                .Replace(sEndCode, String.Empty);
+
+                        if (String.IsNullOrEmpty(str))
                         {
                             return;
                         }
-                        String recevied = Encoding.UTF8.GetString(buffer);
-                        Console.WriteLine(recevied);
-                        callback(recevied);
+
+                        callback(str);
+
+                        builder.Clear();
                     }
                 });
 
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.WriteLine(e.StackTrace);
                 return false;
             }
         }
@@ -95,6 +97,27 @@ namespace SocketClient
         {
             callback = action;
         }
-        
+
+        private static char cEndCode = '\0';
+        private static String sEndCode = cEndCode.ToString();
+        private static byte bEndCode = Encoding.UTF8.GetBytes(new char[] { cEndCode })[0];
+        public static void Recvie(byte[] buffer, List<byte> builder)
+        {
+            try
+            {
+                buffer = new byte[8];
+                client.Receive(buffer);
+                builder.AddRange(buffer);
+                if (buffer[7] != (bEndCode))
+                {
+                    Recvie(buffer, builder);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+                return;
+            }
+        }
     }
 }
