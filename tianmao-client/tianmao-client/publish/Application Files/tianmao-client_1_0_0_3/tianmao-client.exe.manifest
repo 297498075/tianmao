@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="tianmao-client.exe" version="1.0.0.0" publicKeyToken="833859cdbd792e05" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="tianmao-client.exe" version="1.0.0.3" publicKeyToken="833859cdbd792e05" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="tianmao-client" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -9,22 +9,21 @@
   <trustInfo>
     <security>
       <applicationRequestMinimum>
-        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
         <defaultAssemblyRequest permissionSetReference="Custom" />
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
-        <!--
-          UAC 清单选项
-         若想要更改 Windows 用户帐户控制级别，请
-         将 requestedExecutionLevel 节点替换为下述某项。
+        <!-- UAC 清单选项
+             如果想要更改 Windows 用户帐户控制级别，请使用
+             以下节点之一替换 requestedExecutionLevel 节点。n
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-       <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
-       <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
-       <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
-
-        若想要使用文件和注册表虚拟化以实现向后
-        兼容，请删除 requestedExecutionLevel 节点。
-    -->
+            指定 requestedExecutionLevel 元素将禁用文件和注册表虚拟化。
+            如果你的应用程序需要此虚拟化来实现向后兼容性，则删除此
+            元素。
+        -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
     </security>
@@ -49,7 +48,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+m+muH1qe8+zkAbK7mpV1Yn7ZzSFNyJSGGSEjDVO/rg=</dsig:DigestValue>
+        <dsig:DigestValue>N4TAPwS5M9lvRgdLybsBJzyzeZCDVinFqnjyBeWmZOA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -90,29 +89,47 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SocketClient.dll" size="6144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SocketClient.dll" size="6656">
       <assemblyIdentity name="SocketClient" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SMvUDjqNUNk9lBia416mSs+BchiYYy83NGrOl8eODjA=</dsig:DigestValue>
+        <dsig:DigestValue>UiCSftkUSQtaZIdJkAKS7pgsYk2xl1ti/5vy1jSw8tU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tianmao-client.exe" size="125408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tianmao-client.exe" size="200672">
       <assemblyIdentity name="tianmao-client" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gMo+QNsoGL22b6OZMVbUWGryRhdEEzcuRC3X0qK6Sxc=</dsig:DigestValue>
+        <dsig:DigestValue>Z38DftvSbejm1DpB1KU1xrr1v3+l1lZ3WjMVi2HPxdk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="MySQL.json" size="130">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bFj8eEf5wsbQmbNmwRpG9B+4dmSzPIRpWiN07NQ7oK4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SocketClient.json" size="118">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mbYO0j0ZaOcHA8KXQkukkl2LB9tXcIbwFYh+eg0bqAs=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Static\icon.ico" size="67646">
     <hash>
       <dsig:Transforms>
@@ -176,4 +193,21 @@
       <dsig:DigestValue>wDmrlTz6aNIp269ZO0+f+NuBph+l7PSF+/aeuhX4N/I=</dsig:DigestValue>
     </hash>
   </file>
-<publisherIdentity name="CN=DESKTOP-A7KOHTC\匀强的磁场" issuerKeyHash="6d355ef937c47b40b0c97f574861e46e5b8dd691" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>YSxrrdGh/ANqgweLuy641k9i1r5QrdAbMN4M7l/16A0=</DigestValue></Reference></SignedInfo><SignatureValue>YdEZQE8+sF5h7yB2cXxo5y7qlw4G2gl8ZBVvPventU4PmmSO6A1161is7JbG39oIYUsVKaGaWUgcY5P4K+BtuNpMStiHBWJ1aL8FKsusZ5VvbjrN5AaSrAhEKr6T4gWLjI4lTZsUrJrBLMESsbOCNrbMdZfmto/rrdOJFbAFSmQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>876Mi0ffzq2KUwmS0ANFV4DQitck8SITif7LbPrx2Uy3GwcsXhE9iFuO5alZLiEePQonmM0mSIesuPtClMc06+4FlDtj0HoRO61kKhtIv1ugINdcaWqDbdVoc3r2+tqbxAU3VORtFDyF12LCH4V13znUak2ua+ojh2fQZJPkYSk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="0de8f55fee0cde301bd0ad50bed6624fd6b82ebb8b07836a03fca1d1ad6b2c61" Description="" Url=""><as:assemblyIdentity name="tianmao-client.exe" version="1.0.0.0" publicKeyToken="833859cdbd792e05" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-A7KOHTC\匀强的磁场</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Tl92nlJHv/YT22BVDgiFyvmtSttvcfxXFlM5qI4LPyc=</DigestValue></Reference></SignedInfo><SignatureValue>Juk9bPVED3Yfo6czi/f+8ZQYCKFMff1tKUoagGgcGEX6N9RMjHPD9BRiLvLYE2w/3sFfxfFQvj+vKIYmAfNnZh7zgHG6ZT+q2mi0R2w4LFbcTSYlK2ZxXBfNR9nwgvEagHZ4kKYa11WP7cSXX17YXpQf/uFFFZmzohxNWbdVdFU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>876Mi0ffzq2KUwmS0ANFV4DQitck8SITif7LbPrx2Uy3GwcsXhE9iFuO5alZLiEePQonmM0mSIesuPtClMc06+4FlDtj0HoRO61kKhtIv1ugINdcaWqDbdVoc3r2+tqbxAU3VORtFDyF12LCH4V13znUak2ua+ojh2fQZJPkYSk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQI4D1bXNnsJFL0GNL2lyMTTANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEEANwBLAE8ASABUAEMAXFMAXzp2hHjBVzowHhcNMTgwNjE4MDcxOTU3WhcNMTkwNjE4MTMxOTU3WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEEANwBLAE8ASABUAEMAXFMAXzp2hHjBVzowgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAPO+jItH386tilMJktADRVeA0IrXJPEiE4n+y2z68dlMtxsHLF4RPYhbjuWpWS4hHj0KJ5jNJkiHrLj7QpTHNOvuBZQ7Y9B6ETutZCobSL9boCDXXGlqg23VaHN69vram8QFN1TkbRQ8hddiwh+Fdd851GpNrmvqI4dn0GST5GEpAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAMneI7L28Z8cuYY1pfFPqiQXOh6Lfkd0RgOJOchMlHwke6b2dBrQ5CcLk5erWElXF7Sfj0tNnpBYsBV54OkaTDukxx+MbgL0+M4fBONV5y3Q8noAkYmt5DeMcw6+Y+rMofBBk85+govq2Lw36U8oup023whQLBQftLvSEPZ1qYaY=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- 设计此应用程序与其一起工作且已针对此应用程序进行测试的
+           Windows 版本的列表。取消评论适当的元素，Windows 将
+           自动选择最兼容的环境。 -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=DESKTOP-A7KOHTC\匀强的磁场" issuerKeyHash="6d355ef937c47b40b0c97f574861e46e5b8dd691" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>TM+jb73rqbQgE0kdWASOzl0QFPb5Fbw9K7hIHro6Qdw=</DigestValue></Reference></SignedInfo><SignatureValue>uCMa8sb9XMFLh5mxnEKyFLI3DACc3v/kr7wAHmJnDH3ngYyvNlQqbZPro1nUG2g6OjbGln0ZxvyohONiw4ScWYLaK2IXiWbIRO3COiHvmeO0M5+/saNWAy6sB8BUJ6xxdpV3jmnFcXU/2ljVQvHGZS2l7Bi/Knuuw7zyG32aBLs=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>876Mi0ffzq2KUwmS0ANFV4DQitck8SITif7LbPrx2Uy3GwcsXhE9iFuO5alZLiEePQonmM0mSIesuPtClMc06+4FlDtj0HoRO61kKhtIv1ugINdcaWqDbdVoc3r2+tqbxAU3VORtFDyF12LCH4V13znUak2ua+ojh2fQZJPkYSk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="dc413aba1e48b82b3dbc15f9f614105dce8e04581d491320b4a9ebbd6fa3cf4c" Description="" Url=""><as:assemblyIdentity name="tianmao-client.exe" version="1.0.0.3" publicKeyToken="833859cdbd792e05" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-A7KOHTC\匀强的磁场</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>ZCHKPM8QPR3agYYVYo0Wz44nqndHNM5aFOmQkECWUgs=</DigestValue></Reference></SignedInfo><SignatureValue>B0xg8OcRoYqRgUSGS6yZNj61YrooKR5DXxxdZgnOuyJ4EWLPIlUy0/Mam4SUCgdMYqVQrgzIkkiD5xT9Bt2TmPJaT/JnNEnCpAmrLBhuIA2wQ17veeF13Hid3a1D3c9ksoDOQAZ2RcShoLrk1KDeRkzex9FfEfw+5l1sOsgvmvE=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>876Mi0ffzq2KUwmS0ANFV4DQitck8SITif7LbPrx2Uy3GwcsXhE9iFuO5alZLiEePQonmM0mSIesuPtClMc06+4FlDtj0HoRO61kKhtIv1ugINdcaWqDbdVoc3r2+tqbxAU3VORtFDyF12LCH4V13znUak2ua+ojh2fQZJPkYSk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQI4D1bXNnsJFL0GNL2lyMTTANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEEANwBLAE8ASABUAEMAXFMAXzp2hHjBVzowHhcNMTgwNjE4MDcxOTU3WhcNMTkwNjE4MTMxOTU3WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEEANwBLAE8ASABUAEMAXFMAXzp2hHjBVzowgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAPO+jItH386tilMJktADRVeA0IrXJPEiE4n+y2z68dlMtxsHLF4RPYhbjuWpWS4hHj0KJ5jNJkiHrLj7QpTHNOvuBZQ7Y9B6ETutZCobSL9boCDXXGlqg23VaHN69vram8QFN1TkbRQ8hddiwh+Fdd851GpNrmvqI4dn0GST5GEpAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAMneI7L28Z8cuYY1pfFPqiQXOh6Lfkd0RgOJOchMlHwke6b2dBrQ5CcLk5erWElXF7Sfj0tNnpBYsBV54OkaTDukxx+MbgL0+M4fBONV5y3Q8noAkYmt5DeMcw6+Y+rMofBBk85+govq2Lw36U8oup023whQLBQftLvSEPZ1qYaY=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

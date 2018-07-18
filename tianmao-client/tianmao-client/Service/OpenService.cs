@@ -15,7 +15,8 @@ namespace tianmao_client.Service
 
             if (!String.IsNullOrEmpty(path))
             {
-                Process.Start(path);
+                var arr = path.Split('\0');
+                Process.Start(arr[0], arr[1]);
             }
 
             return true;

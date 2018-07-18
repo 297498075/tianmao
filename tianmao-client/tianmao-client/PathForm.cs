@@ -50,10 +50,14 @@ namespace tianmao_client
             paths.Clear();
             foreach (DataGridViewRow keyValue in dataGridView.Rows)
             {
-                if(!String.IsNullOrEmpty(keyValue.Cells[0].Value?.ToString()))
+                var cmd = keyValue.Cells[2].Value == null ?
+                    String.Empty : keyValue.Cells[2].Value.ToString();
+                if (!String.IsNullOrEmpty(keyValue.Cells[0].Value?.ToString()))
                 paths.Add(keyValue.Cells[0].Value?.ToString()
-                    ,keyValue.Cells[1].Value.ToString());
+                    ,keyValue.Cells[1].Value.ToString() + '\0' + cmd
+                     );
             }
+            MessageBox.Show("保存成功");
         }
     }
 }

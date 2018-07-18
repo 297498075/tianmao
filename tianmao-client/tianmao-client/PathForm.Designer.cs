@@ -32,10 +32,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.button_cancel = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.button_save = new System.Windows.Forms.Button();
+            this.pathFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Column_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pathFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button_save = new System.Windows.Forms.Button();
+            this.Column_Command = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pathFormBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -65,28 +66,13 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column_Name,
-            this.Column_Path});
+            this.Column_Path,
+            this.Column_Command});
             this.dataGridView.Location = new System.Drawing.Point(0, 27);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowTemplate.Height = 23;
             this.dataGridView.Size = new System.Drawing.Size(526, 267);
             this.dataGridView.TabIndex = 4;
-            // 
-            // Column_Name
-            // 
-            this.Column_Name.HeaderText = "程序名称";
-            this.Column_Name.Name = "Column_Name";
-            this.Column_Name.Width = 150;
-            // 
-            // Column_Path
-            // 
-            this.Column_Path.HeaderText = "程序地址";
-            this.Column_Path.Name = "Column_Path";
-            this.Column_Path.Width = 350;
-            // 
-            // pathFormBindingSource
-            // 
-            this.pathFormBindingSource.DataSource = typeof(tianmao_client.PathForm);
             // 
             // button_save
             // 
@@ -99,6 +85,28 @@
             this.button_save.Text = "保存";
             this.button_save.UseVisualStyleBackColor = true;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            // 
+            // pathFormBindingSource
+            // 
+            this.pathFormBindingSource.DataSource = typeof(tianmao_client.PathForm);
+            // 
+            // Column_Name
+            // 
+            this.Column_Name.HeaderText = "程序名称";
+            this.Column_Name.Name = "Column_Name";
+            this.Column_Name.Width = 125;
+            // 
+            // Column_Path
+            // 
+            this.Column_Path.HeaderText = "程序地址";
+            this.Column_Path.Name = "Column_Path";
+            this.Column_Path.Width = 200;
+            // 
+            // Column_Command
+            // 
+            this.Column_Command.HeaderText = "命令";
+            this.Column_Command.Name = "Column_Command";
+            this.Column_Command.Width = 160;
             // 
             // PathForm
             // 
@@ -126,8 +134,9 @@
         private System.Windows.Forms.BindingSource pathFormBindingSource;
         private System.Windows.Forms.Button button_cancel;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Path;
-        private System.Windows.Forms.Button button_save;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Command;
     }
 }

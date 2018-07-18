@@ -1,0 +1,8 @@
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\bin\Release\SocketClient.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\bin\Release\SocketClient.pdb
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\bin\Release\Newtonsoft.Json.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\bin\Release\Newtonsoft.Json.xml
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Release\SocketClient.csproj.CoreCompileInputs.cache
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Release\SocketClient.csproj.CopyComplete
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Release\SocketClient.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Release\SocketClient.pdb

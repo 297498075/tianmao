@@ -1,0 +1,12 @@
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\bin\Release\DBCommon.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\bin\Release\DBCommon.pdb
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\bin\Release\Google.Protobuf.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\bin\Release\MySql.Data.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\bin\Release\Newtonsoft.Json.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\bin\Release\Google.Protobuf.xml
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\bin\Release\MySql.Data.xml
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\bin\Release\Newtonsoft.Json.xml
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\obj\Release\DBCommon.csproj.CoreCompileInputs.cache
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\obj\Release\DBCommon.csproj.CopyComplete
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\obj\Release\DBCommon.dll
+C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\obj\Release\DBCommon.pdb

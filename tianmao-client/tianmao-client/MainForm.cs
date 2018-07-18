@@ -9,6 +9,7 @@ namespace tianmao_client
     {
         private static String userId;
         private static String password;
+        private static bool close;
 
         public static string UserId { get => userId.Trim(); set => userId = value; }
         public static string Password { get => password.Trim(); set => password = value; }
@@ -67,7 +68,8 @@ namespace tianmao_client
 
         private void button_cancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            close = true;
+            Close();
         }
 
         private void 设置ToolStripMenuItem_MouseEnter(object sender, EventArgs e)
@@ -92,7 +94,8 @@ namespace tianmao_client
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            close = true;
+            Close();
         }
 
         private void 程序路径ToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -114,5 +117,20 @@ namespace tianmao_client
             }
         }
 
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(!close)
+            {
+                e.Cancel = true;
+                this.Hide();
+            }
+        }
+
+        private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+            this.Activate();
+        }
     }
 }
