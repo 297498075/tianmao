@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2i/kLbuTcrc5LcPD6o+OVyigo+rM8ev/QaXgSvlO0HU=</dsig:DigestValue>
+        <dsig:DigestValue>mcyvlnnWNwAgMaHHKbU+Q2/g8mJt/1j5nNzR22MMBTg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -97,19 +97,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HQig8Kdw9kOE6kab/pQK5eqWoEgyW3bP3APAyjoywnc=</dsig:DigestValue>
+        <dsig:DigestValue>5BDt97HvP45TqenIvr+RIsO8Y/eJvd6Ops/9S8aoWKA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tianmao-client.exe" size="125408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tianmao-client.exe" size="199648">
       <assemblyIdentity name="tianmao-client" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gUjdVM+nv8OTpKCA4cKoavl8kNaktm8ncYyK6LxxchI=</dsig:DigestValue>
+        <dsig:DigestValue>Gi2Q1otKRClcwFAwSXJEiMGS8fPV23ZP1bwV0esd0rA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

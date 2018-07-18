@@ -24,3 +24,11 @@ C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\ob
 C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Debug\SocketClient.dll
 C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Debug\SocketClient.pdb
 C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Debug\SocketClient.csprojAssemblyReference.cache
+C:\Users\chen2\Documents\GitHub\tianmao\tianmao-client\SocketClient\bin\Debug\SocketClient.dll
+C:\Users\chen2\Documents\GitHub\tianmao\tianmao-client\SocketClient\bin\Debug\SocketClient.pdb
+C:\Users\chen2\Documents\GitHub\tianmao\tianmao-client\SocketClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\chen2\Documents\GitHub\tianmao\tianmao-client\SocketClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\chen2\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Debug\SocketClient.csproj.CoreCompileInputs.cache
+C:\Users\chen2\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Debug\SocketClient.csproj.CopyComplete
+C:\Users\chen2\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Debug\SocketClient.dll
+C:\Users\chen2\Documents\GitHub\tianmao\tianmao-client\SocketClient\obj\Debug\SocketClient.pdb

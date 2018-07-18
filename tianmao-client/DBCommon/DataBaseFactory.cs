@@ -9,7 +9,7 @@ namespace DBCommon
         public static IDataBase GetDataBase(DataBaseType dataBaseType)
         {
             if (dataBaseType == DataBaseType.main)
-                return new MySQL.MySQL();
+                return MySQL.MySQL.GetDataBase();
             else
                 return null;
         }

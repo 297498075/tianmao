@@ -12,6 +12,7 @@ namespace DBCommon.MySQL
     public class MySQL : IDataBase
     {
         private static Dictionary<String, String> dictionary;
+        private static MySQL db = new MySQL();
         internal MySQL() { }
 
         static MySQL()
@@ -114,6 +115,7 @@ namespace DBCommon.MySQL
         {
             MySqlConnection connection = GetMySqlConnection();
             List<MySqlParameter> parameters = new List<MySqlParameter>();
+
             if (dic != null)
             {
                 foreach (var item in dic)
@@ -295,7 +297,7 @@ namespace DBCommon.MySQL
 
         public static IDataBase GetDataBase()
         {
-            return new MySQL();
+            return db;
         }
 
         private static Queue<MySqlConnection> connectionQueue = new Queue<MySqlConnection>();
