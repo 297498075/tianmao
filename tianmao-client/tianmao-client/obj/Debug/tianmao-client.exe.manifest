@@ -48,7 +48,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>N4TAPwS5M9lvRgdLybsBJzyzeZCDVinFqnjyBeWmZOA=</dsig:DigestValue>
+        <dsig:DigestValue>e5yeAAE8oyxKhijFKvfAcSgrv6a5HaJOx5NVGPXvuek=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -96,29 +96,29 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UiCSftkUSQtaZIdJkAKS7pgsYk2xl1ti/5vy1jSw8tU=</dsig:DigestValue>
+        <dsig:DigestValue>WnQhRoqha/5Vq2yytvB1xx9G5XVOv/n0zZNpx699g7Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tianmao-client.exe" size="200672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tianmao-client.exe" size="201696">
       <assemblyIdentity name="tianmao-client" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Z38DftvSbejm1DpB1KU1xrr1v3+l1lZ3WjMVi2HPxdk=</dsig:DigestValue>
+        <dsig:DigestValue>XSkuH863o/ptjwpSQ8be2TTrFos+VrCT2CD4n12wN/c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="MySQL.json" size="130">
+  <file name="MySQL.json" size="123">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>bFj8eEf5wsbQmbNmwRpG9B+4dmSzPIRpWiN07NQ7oK4=</dsig:DigestValue>
+      <dsig:DigestValue>wviZJ/6OlqFXuVgP2REbDjVZSx8MMuTA9cK0ZdVdC6Q=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SocketClient.json" size="118">
@@ -184,13 +184,13 @@
       <dsig:DigestValue>5/+cWShV62pGghaGqK7tGgiC4wEu3ajaDNMc5uADFcw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="tianmao-client.exe.config" size="189">
+  <file name="tianmao-client.exe.config" size="186">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>wDmrlTz6aNIp269ZO0+f+NuBph+l7PSF+/aeuhX4N/I=</dsig:DigestValue>
+      <dsig:DigestValue>1NgAxCSw4ibTXzWVy7D6Rw60Qih4Dn37KvGhG5Ora/s=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

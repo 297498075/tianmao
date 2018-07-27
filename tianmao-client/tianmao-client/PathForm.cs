@@ -3,12 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using tianmao_client.Service;
 
 namespace tianmao_client
 {
@@ -35,6 +37,15 @@ namespace tianmao_client
         private void button_cancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+            if (DialogResult == DialogResult.OK) {
+                //关闭选中程序
+                int index = dataGridView.CurrentRow.Index;    //取得选中行的索引  
+                string exeName = dataGridView.Rows[index].Cells["Column_Path"].Value.ToString();
+                //程序名称
+                exeName = exeName.Substring(exeName.LastIndexOf('\\') + 1);
+                CmdService cmd = new CmdService();
+                cmd.Exec("taskkill /f /im \""+ exeName + "\"");
+            }
         }
 
         private void PathForm_Load(object sender, EventArgs e)

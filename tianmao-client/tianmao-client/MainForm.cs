@@ -1,7 +1,9 @@
 ﻿using SocketClient;
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using tianmao_client.Common;
+using tianmao_client.Service;
 
 namespace tianmao_client
 {
@@ -23,7 +25,17 @@ namespace tianmao_client
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            if (AutoStart.Have(Program.Name)) { windows启动ToolStripMenuItem.Checked = true; }
+            System.Security.Principal.WindowsIdentity wid = System.Security.Principal.WindowsIdentity.GetCurrent();
+            //判断是否有登录用户名
+            if (!string.IsNullOrWhiteSpace(wid.Name))
+            {
+                System.Security.Principal.WindowsPrincipal p = new System.Security.Principal.WindowsPrincipal(wid);
+                //判断当前用户是不是admin
+                var isAdmin = p.IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator);
+                //获取当前用户权限
+                var auth = wid.AuthenticationType;
+                if (AutoStart.Have(Program.Name)) { windows启动ToolStripMenuItem.Checked = true; }
+            }
         }
 
         private void button_ok_Click(object sender, EventArgs e)
@@ -119,7 +131,7 @@ namespace tianmao_client
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(!close)
+            if (!close)
             {
                 e.Cancel = true;
                 this.Hide();

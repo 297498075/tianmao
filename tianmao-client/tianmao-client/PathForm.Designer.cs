@@ -32,11 +32,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.button_cancel = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.button_save = new System.Windows.Forms.Button();
-            this.pathFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Column_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_Command = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_save = new System.Windows.Forms.Button();
+            this.pathFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pathFormBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -74,22 +74,6 @@
             this.dataGridView.Size = new System.Drawing.Size(526, 267);
             this.dataGridView.TabIndex = 4;
             // 
-            // button_save
-            // 
-            this.button_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_save.Location = new System.Drawing.Point(386, 299);
-            this.button_save.Margin = new System.Windows.Forms.Padding(2);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(63, 27);
-            this.button_save.TabIndex = 5;
-            this.button_save.Text = "保存";
-            this.button_save.UseVisualStyleBackColor = true;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
-            // 
-            // pathFormBindingSource
-            // 
-            this.pathFormBindingSource.DataSource = typeof(tianmao_client.PathForm);
-            // 
             // Column_Name
             // 
             this.Column_Name.HeaderText = "程序名称";
@@ -107,6 +91,22 @@
             this.Column_Command.HeaderText = "命令";
             this.Column_Command.Name = "Column_Command";
             this.Column_Command.Width = 160;
+            // 
+            // button_save
+            // 
+            this.button_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button_save.Location = new System.Drawing.Point(386, 299);
+            this.button_save.Margin = new System.Windows.Forms.Padding(2);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(63, 27);
+            this.button_save.TabIndex = 5;
+            this.button_save.Text = "保存";
+            this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            // 
+            // pathFormBindingSource
+            // 
+            this.pathFormBindingSource.DataSource = typeof(tianmao_client.PathForm);
             // 
             // PathForm
             // 
