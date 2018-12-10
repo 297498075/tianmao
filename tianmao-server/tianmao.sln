@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tianmao", "tianmao\tianmao.csproj", "{D290D614-2F35-449C-961A-66200AE5F647}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketServer", "SocketServer\SocketServer.csproj", "{46B106F9-DA7D-4434-9CA9-CB513D021B1E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBCommon", "DBCommon\DBCommon.csproj", "{DDC184FE-46C3-4F17-9D93-2DDBE39C0C6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tianmao", "tianmao\tianmao.csproj", "{D290D614-2F35-449C-961A-66200AE5F647}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +15,6 @@ Global
 		{D290D614-2F35-449C-961A-66200AE5F647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D290D614-2F35-449C-961A-66200AE5F647}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D290D614-2F35-449C-961A-66200AE5F647}.Release|Any CPU.Build.0 = Release|Any CPU
-		{46B106F9-DA7D-4434-9CA9-CB513D021B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46B106F9-DA7D-4434-9CA9-CB513D021B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46B106F9-DA7D-4434-9CA9-CB513D021B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46B106F9-DA7D-4434-9CA9-CB513D021B1E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DDC184FE-46C3-4F17-9D93-2DDBE39C0C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DDC184FE-46C3-4F17-9D93-2DDBE39C0C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DDC184FE-46C3-4F17-9D93-2DDBE39C0C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DDC184FE-46C3-4F17-9D93-2DDBE39C0C6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

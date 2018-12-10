@@ -1,10 +1,7 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Threading.Tasks;
 using tianmao.Common;
+using System.Collections.Generic;
 using tianmao.Model.Domain;
 using tianmao.Model.Entry;
 
@@ -14,7 +11,7 @@ namespace tianmao.Service
     {
         public override ResultModel Exec(QueryModel query)
         {
-            var DB = DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main);
+            var DB = DBCommon.PostgreSQL.PostgreSQL.GetDataBase();
 
             var model = base.Exec(query);
 
@@ -28,7 +25,7 @@ namespace tianmao.Service
             {
                 { "token", query.Token }
             };
-            User user = DB.ExecuteReader<User>("select * from User where token=?token", dic)?.FirstOrDefault();
+            User user = DB.ExecuteReader<User>("select * from User where token=@token", dic)?.FirstOrDefault();
 
             if(user == null)
             {

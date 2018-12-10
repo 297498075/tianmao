@@ -35,3 +35,4 @@ C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\obj\De
 C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\obj\Debug\DBCommon.csproj.CopyComplete
 C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\obj\Debug\DBCommon.dll
 C:\Users\匀强的磁场\Documents\GitHub\tianmao\tianmao-client\DBCommon\obj\Debug\DBCommon.pdb
+C:\Users\chen2\Documents\GitHub\tianmao\tianmao-client\DBCommon\obj\Debug\DBCommon.csprojAssemblyReference.cache

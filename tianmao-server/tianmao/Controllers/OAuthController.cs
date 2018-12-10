@@ -17,9 +17,10 @@ namespace tianmao
     public class OAuthController : Controller
     {
         private static byte[] htmlPage;
+        private static IDBCommon.IDataBase DB;
         static OAuthController()
         {
-            var DB = DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main);
+            DB = DBCommon.PostgreSQL.PostgreSQL.GetDataBase();
             String exist = DB.ExecuteSingle("SELECT table_name FROM information_schema.TABLES WHERE table_name ='OAuthLog'");
 
             if (String.IsNullOrEmpty(exist))
@@ -61,8 +62,7 @@ state varchar(32)
                 { "response_type", response_type },
                 { "state", state }
             };
-            DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main)
-                .ExecuteNonQuery(@"Insert into OAuthLog(redirect_uri,client_id,response_type,state) values(?redirect_uri,?client_id,?response_type,?state)", dic);
+            DB.ExecuteNonQuery(@"Insert into OAuthLog(redirect_uri,client_id,response_type,state) values(@redirect_uri,@client_id,@response_type,@state)", dic);
 
             Response.ContentType = "text/html;charset=UTF-8";
             Response.Body.Write(htmlPage, 0, htmlPage.Length);

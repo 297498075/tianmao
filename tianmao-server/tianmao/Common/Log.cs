@@ -1,4 +1,5 @@
 ﻿using DBCommon;
+using IDBCommon;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,13 +18,13 @@ namespace tianmao.Common
             {
                 if (db == null)
                 {
-                    db = DataBaseFactory.GetDataBase(DataBaseType.main);
+                    db = DBCommon.PostgreSQL.PostgreSQL.GetDataBase();
 
-                    String exist = DB.ExecuteSingle("SELECT table_name FROM information_schema.TABLES WHERE table_name ='ProgramLog'");
+                    String exist = DB.ExecuteSingle("SELECT table_name FROM information_schema.TABLES WHERE table_name ='programlog'");
 
                     if (String.IsNullOrEmpty(exist))
                     {
-                        DB.ExecuteNonQuery(@"create table ProgramLog
+                        DB.ExecuteNonQuery(@"create table programlog
 (
 date datetime default now(),
 log text,
@@ -35,7 +36,7 @@ address varchar(255) default """"
             }
         }
 
-        private static readonly String log = @"insert into ProgramLog(log,address) values(?log,?address)";
+        private static readonly String log = @"insert into programlog(log,address) values(@log,@address)";
 
         private static Dictionary<String, object> dic = new Dictionary<string, object>();
 

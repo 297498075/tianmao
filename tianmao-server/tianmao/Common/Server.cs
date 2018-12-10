@@ -13,15 +13,14 @@ namespace tianmao.Common
     public class Server
     {
         //Key:SessionID,Value:Socekt
-        private static Dictionary<String, AsyncSocketSession> clients;
+        private static Dictionary<String, SocketAsyncEventArgs> clients;
         //Key:SessionID,Value:Message
         private static Dictionary<String, String> messageQueue;
 
         public static void Start()
         {
-            clients = new Dictionary<string, AsyncSocketSession>();
+            clients = new Dictionary<string, SocketAsyncEventArgs>();
             messageQueue = new Dictionary<string, string>();
-            SocketServer.SocketServer.SetServerNewClientAccepted(NewAccpet);
             SocketServer.SocketServer.SetCallBack(CallBack);
             SocketServer.SocketServer.Start();
 
@@ -34,12 +33,7 @@ namespace tianmao.Common
                 }
             });
         }
-
-        private static void NewAccpet(Socket client, ISocketSession session)
-        {
-            var ass = session as AsyncSocketSession;
-        }
-
+        
         public static bool Send<T>(T value, String address)
         {
             return Send(value.GetType().Name, value.ToString(), address);
@@ -49,27 +43,27 @@ namespace tianmao.Common
         {
             lock (clients)
             {
-                if (!clients.TryGetValue(address, out AsyncSocketSession val)) return false;
-
+                if (!clients.TryGetValue(address, out SocketAsyncEventArgs val)) return false;
+                var ok = true;
                 try
                 {
-                    bool ok = val.Send(commandName + ":" + commandValue + ";");
-                    if (!ok) { clients.Remove(address); }
-                    return ok;
+                    (val.UserToken as AsyncSocketSession).Send(commandName + ":" + commandValue + ";");
                 }
                 catch (Exception)
                 {
-                    clients.Remove(address);
+                    ok = false;
                 }
+                if (!ok) { clients.Remove(address); }
+                return ok;
             }
-            return false;
         }
 
-        public static void CallBack(AsyncSocketSession ass, String recevied)
+        public static void CallBack(SocketAsyncEventArgs ass)
         {
-            Console.WriteLine(recevied);
+            String str = Encoding.UTF8.GetString(ass.Buffer, ass.Offset, ass.Count);
+            Console.Write(str);
             Dictionary<String, String> cmds = new Dictionary<string, string>();
-            String[] recevieds = recevied.Split(';');
+            String[] recevieds = str.Split(';');
             for (int i = 0; i < recevieds.Length; i++)
             {
                 var cmd = recevieds[i].Split(':');

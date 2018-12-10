@@ -10,7 +10,7 @@ namespace tianmao.Service
     {
         static BaseService()
         {
-            var DB = DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main);
+            var DB = DBCommon.PostgreSQL.PostgreSQL.GetDataBase();
 
             if (String.IsNullOrEmpty(DB.ExecuteSingle("SELECT table_name FROM information_schema.TABLES WHERE table_name = 'User'")))
             {

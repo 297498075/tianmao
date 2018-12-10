@@ -6,9 +6,9 @@ namespace DBCommon
 {
     public static class DataBaseFactory
     {
-        public static IDataBase GetDataBase(DataBaseType dataBaseType)
+        public static IDataBase GetDataBase(DataBaseType dataBaseType = DataBaseType.MySQL)
         {
-            if (dataBaseType == DataBaseType.main)
+            if (dataBaseType == DataBaseType.MySQL)
                 return MySQL.MySQL.GetDataBase();
             else
                 return null;
@@ -17,7 +17,7 @@ namespace DBCommon
 
     public enum DataBaseType
     {
-        main
+        MySQL
     }
 
 }

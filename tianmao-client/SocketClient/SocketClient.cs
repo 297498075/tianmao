@@ -105,10 +105,10 @@ namespace SocketClient
         {
             try
             {
-                buffer = new byte[8];
+                buffer = new byte[128];
                 client.Receive(buffer);
                 builder.AddRange(buffer);
-                if (buffer[7] != (bEndCode))
+                if (buffer[127] != (bEndCode))
                 {
                     Recvie(buffer, builder);
                 }

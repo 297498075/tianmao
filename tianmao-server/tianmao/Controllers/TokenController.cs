@@ -19,7 +19,7 @@ namespace tianmao
     {
         static TokenController()
         {
-            var DB = DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main);
+            var DB = DBCommon.PostgreSQL.PostgreSQL.GetDataBase(); ;
             String exist = DB.ExecuteSingle("SELECT table_name FROM information_schema.TABLES WHERE table_name ='TokenLog'");
 
             if (String.IsNullOrEmpty(exist))
@@ -68,8 +68,8 @@ userId bigint
                 { "refresh_token", refresh_token },
                 { "userId", 111 }
             };
-            DBCommon.DataBaseFactory.GetDataBase(DBCommon.DataBaseType.main)
-                .ExecuteNonQuery(@"Insert into TokenLog(access_token,refresh_token,userId) values(?access_token,?refresh_token,?userId)", dic);
+            DBCommon.PostgreSQL.PostgreSQL.GetDataBase()
+                .ExecuteNonQuery(@"Insert into TokenLog(access_token,refresh_token,userId) values(@access_token,@refresh_token,@userId)", dic);
 
 #pragma warning disable CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
             Log.WriteLogAsync(resultString, "response");

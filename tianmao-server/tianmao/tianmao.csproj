@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
   </PropertyGroup>
 
@@ -29,8 +29,9 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Npgsql" Version="4.0.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,11 +43,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DBCommon\DBCommon.csproj" />
-    <ProjectReference Include="..\SocketServer\SocketServer.csproj" />
+    <Reference Include="DBCommon.PostgreSQL">
+      <HintPath>..\lib\DBCommon.PostgreSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="IDBCommon">
+      <HintPath>..\lib\IDBCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="SocketServer">
+      <HintPath>..\lib\SocketServer.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="PostgreSQL.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Update="SocketServer.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

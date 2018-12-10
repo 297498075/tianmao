@@ -19,7 +19,7 @@ namespace tianmao
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseUrls("http://*:5001")
+                .UseUrls("http://*:54321")
                 .UseStartup<Startup>()
                 .Build();
     }

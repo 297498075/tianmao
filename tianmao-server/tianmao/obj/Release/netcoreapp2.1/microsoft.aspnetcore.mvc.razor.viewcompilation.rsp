@@ -1,0 +1,5 @@
+C:\Users\chen2\Documents\GitHub\tianmao\tianmao-server\tianmao
+--output-path=obj\Release\netcoreapp2.1\
+--application-name=tianmao
+--content-root=C:\Users\chen2\Documents\GitHub\tianmao\tianmao-server\tianmao
+--file=
