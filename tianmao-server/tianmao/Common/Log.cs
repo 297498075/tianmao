@@ -26,9 +26,9 @@ namespace tianmao.Common
                     {
                         DB.ExecuteNonQuery(@"create table programlog
 (
-date datetime default now(),
+date date default now(),
 log text,
-address varchar(255) default """"
+address varchar(255) default ''
 )");
                     }
                 }

@@ -18,7 +18,7 @@ namespace tianmao.Controllers
         public IService service;
 
         [HttpPost]
-        public HttpResponseMessage Post()
+        public void Post()
         {
             byte[] buffer = Request.Body.GetAllBytes();
             String queryString = Encoding.UTF8.GetString(buffer);
@@ -28,11 +28,11 @@ namespace tianmao.Controllers
 
             QueryModel query = Convert(queryString);
 
-            if (query == null) { return WriteError(Response,ErrorModel); }
+            if (query == null) { WriteError(Response,ErrorModel); }
 
             service = SelectService(query);
 
-            if (service == null) { return WriteError(Response, ErrorModel); }
+            if (service == null) { WriteError(Response, ErrorModel); }
 
             ResultModel result = null;
 
@@ -45,7 +45,7 @@ namespace tianmao.Controllers
 #pragma warning disable CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
                 Log.WriteLogAsync(e.Message, service.GetType().Name);
 #pragma warning restore CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
-                return WriteError(Response, ErrorModel);
+                WriteError(Response, ErrorModel);
             }
             ResponseModel<ResultModel> model = new ResponseModel<ResultModel>
             {
@@ -59,9 +59,9 @@ namespace tianmao.Controllers
             Log.WriteLogAsync(resultString, "response");
 #pragma warning restore CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
             byte[] by = Encoding.UTF8.GetBytes(resultString);
+            Response.ContentLength = by.Length;
             Response.Body.Write(by, 0, by.Length);
             Response.Body.Flush();
-            return null;
         }
 
         private IService SelectService(QueryModel query)
@@ -142,8 +142,9 @@ namespace tianmao.Controllers
             }
         }
 
-        public HttpResponseMessage WriteError(HttpResponse Response, byte[] resultString)
+        public ActionResult WriteError(HttpResponse Response, byte[] resultString)
         {
+            Response.ContentLength = resultString.Length;
             Response.Body.Write(resultString, 0, resultString.Length);
             Response.Body.Flush();
             return null;
